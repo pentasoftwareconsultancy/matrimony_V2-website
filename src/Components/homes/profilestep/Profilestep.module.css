@@ -1,6 +1,9 @@
 .profileStepsContainer {
     position: relative;
-    margin: 20px auto; /* Center the container with top/bottom margin */
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+ /* Center the container with top/bottom margin */
     padding: 0 20px;
     max-width: 1200px; /* Limit the width of the container */
   }
@@ -79,14 +82,15 @@
   }
   
   .registerButton {
-    background-color: #f01e4c;
+    background-color:#ff5069;
     padding: 10px 20px;
     color: white;
     width: 150px;
+    margin-bottom: 50px;
     border: 1px solid red;
     border-radius: 15px 0 15px 15px;
     display: block;
-    margin: 0 auto;
+    margin: 50px auto;
     font-family: 'Montserrat', sans-serif;
   }
   

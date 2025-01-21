@@ -5,7 +5,7 @@
     gap: 20px;
   
     width: 70%;
-  margin-left: 250px;
+  margin-left: 210px;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 10px;
@@ -29,25 +29,28 @@
   
   .content {
     flex: 1;
-    padding-top: 50px;
+    padding-right: 20px;
+    padding-top: 30px;
+    text-align: justify;
   }
   
   h2 {
     font-size: 24px;
-    margin-bottom: 15px;
+    text-align: center;
+    margin-bottom: 10px;
   }
   
   p {
     font-size: 16px;
     line-height: 1.5;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     color: #333;
   }
   
   .button {
-    background-color: #e53935;
+    background-color:#ff5069;
     color: #fff;
-    margin-left: 300px;
+    margin-left: 260px;
     padding: 10px 20px;
     border: none;
     border-radius: 15px 0 15px 15px;
@@ -55,9 +58,9 @@
     font-size: 16px;
   }
   
-  .button:hover {
+  /* .button:hover {
     background-color: #c62828;
-  }
+  } */
 
 
 

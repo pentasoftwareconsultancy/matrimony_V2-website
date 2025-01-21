@@ -1,41 +1,43 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Hero.module.css";
-import image1 from "../hero/images/slide11.jpg"
-import image2 from "../hero/images/slide2.jpg"
-import image3 from "../hero/images/slide4.jpg"
-import image4 from "../hero/images/slide1.jpg"
+import image1 from "../hero/images/image13.webp"
+import image2 from "../hero/images/image12.webp"
+import image3 from "../hero/images/image13.webp"
+
 import image5 from "../hero/images/slide2.jpg"
+import image6 from "../hero/images/image12.webp"
 
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const slides = [
-    {
-      image: image1,
-      title: "Empower Change",
-      subtitle: "Together we can make a difference.",
-    },
-    {
-      image:image2,
-      title: "Inspire Hope",
-      subtitle: "Your contribution matters.",
-    },
-    {
-      image: image3,
-      title: "Support Communities",
-      subtitle: "Building a better future.",
-    },
-    {
-      image: image4,
-      title: "Educate Minds",
-      subtitle: "Education transforms lives.",
-    },
-    {
-      image: image5,
-      title: "Spread Kindness",
-      subtitle: "Small actions, big impact.",
-    },
-  ];
+    
+      {
+        image: image1,
+        title: "Fuel Your Passion for Change with Shadi Bes - Website of Impact",
+        subtitle: "Together, let's create a world of boundless opportunities on this journey with Shadi Bes.",
+      },
+      {
+        image: image2,
+        title: "Ignite Hope and Passion with Shadi Bes - Join the Movement",
+        subtitle: "Your commitment sparks lasting transformation. Be part of the change with Shadi Bes.",
+      },
+      {
+        image: image3,
+        title: "Empower Communities with Passion and Purpose - Shadi Bes Website",
+        subtitle: "Building a brighter future, together. It starts here with Shadi Bes.",
+      },
+      {
+        image: image6,
+        title: "Transform Education with Passion - Shadi Bes at Your Service",
+        subtitle: "Unlocking potential, one mind at a time with Shadi Bes. Let’s make it happen.",
+      },
+      {
+        image: image5,
+        title: "Spread Kindness and Passion - The Shadi Bes Way",
+        subtitle: "Every act of kindness ripples across the world. Join us on this website to create impact with Shadi Bes.",
+      },
+    ];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -62,10 +64,15 @@ const Hero = () => {
               alt={`Slide ${index + 1}`}
               className={styles.image}
             />
-            <div className={styles.textOverlay}>
-              <h1>{slide.title}</h1>
-              <p>{slide.subtitle}</p>
-            </div>
+           <div className={styles.textOverlay}>
+  <h1>{slide.title.split(' - ').map((part, index) => (
+    <>
+      {index > 0 && <br />}
+      {part}
+    </>
+  ))}</h1>
+  <p>{slide.subtitle}</p>
+</div>
           </div>
         ))}
       </div>

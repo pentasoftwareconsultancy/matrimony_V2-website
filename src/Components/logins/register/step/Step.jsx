@@ -1,5 +1,4 @@
-// Step Component
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Step.module.css";
 import Profile from "../profile/Profile";
 import FamilyBackground from "../familyback/Familyback";
@@ -33,7 +32,11 @@ const Step = () => {
     partner: { ageRangeFrom: "", ageRangeTo: "", partnerEducation: "", partnerLocation: "", partnerPackage: "", partnerAbout: "" },
   };
 
-  const [formData, setFormData] = useState(initialFormData);
+  const [formData, setFormData] = useState(() => {
+    // Load saved data from localStorage on mount
+    const savedData = localStorage.getItem("formData");
+    return savedData ? JSON.parse(savedData) : initialFormData;
+  });
 
   const steps = [
     { id: 1, label: "Profile", component: <Profile formData={formData} setFormData={setFormData} setIsFormValid={setIsFormValid} /> },
@@ -53,7 +56,14 @@ const Step = () => {
   const handleSubmit = () => {
     console.log("Form Data Submitted:", formData);
     alert("Form submitted successfully!");
+    // Save data to localStorage
+    localStorage.setItem("formData", JSON.stringify(formData));
   };
+
+  useEffect(() => {
+    // Save formData to localStorage whenever it changes
+    localStorage.setItem("formData", JSON.stringify(formData));
+  }, [formData]);
 
   return (
     <div className={styles.stepContainer}>

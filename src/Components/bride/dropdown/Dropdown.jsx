@@ -26,9 +26,9 @@ const Dropdown = ({ label, options }) => {
           {options.map((option, index) => (
             <li key={index} className={styles.option}>
               <label>
-                <input
+                <input className={styles.checkbox}
                   type="checkbox"
-                  checked={selectedOption === option} // Only one option can be checked
+                  checked={selectedOption === option} 
                   onChange={() => handleCheckboxChange(option)}
                 />
                 {option}

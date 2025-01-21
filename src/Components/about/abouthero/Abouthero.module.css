@@ -7,7 +7,7 @@
   }
   .content{
     display: flex;
-    margin-top: 60px;
+    margin-top: 50px;
     background-color: #EBEDF9;
   }
   /* .container {
@@ -67,6 +67,8 @@
   margin-bottom: 7px;
 }
 .description {
+  text-align: justify;
+  padding-right: 50px;
   font-size: 16px;
   line-height: 1.5;
 }

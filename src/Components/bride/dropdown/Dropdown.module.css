@@ -12,7 +12,9 @@
     width: 300px;
     background-color: #fff;
   }
-  
+  .checkbox{
+    margin-right: 10px;
+  }
   .header {
     display: flex;
     justify-content: space-between;

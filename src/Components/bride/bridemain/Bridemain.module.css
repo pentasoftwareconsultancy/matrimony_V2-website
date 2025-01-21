@@ -1,12 +1,14 @@
 .Bridemain{
     display: flex;
     margin-top: 70px;
+    margin-left: 70px;
+    margin-right: 100px;
 }
 .main{
-    width: 30%;
+    width: 35%;
 }
 .containmain{
-    width: 60%;
+    width: 80%;
 }
 
 

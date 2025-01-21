@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import styles from "./Navbar.module.css";
 import { Link } from "react-router-dom";
-// import logo from "../../assets/logo.png";
+import styles from "./Navbar.module.css";
 
-const Navbar = () => {
+const Navbar = ({ isHomePage }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [dropdownVisible, setDropdownVisible] = useState(false);
 
   // Toggle menu for mobile
   const toggleMenu = () => {
@@ -31,30 +31,109 @@ const Navbar = () => {
       <div className={styles.navbar}>
         {/* Logo */}
         <div className={styles.logo}>
-          {/* <img src={logo} alt="Logo" /> */}
           <a>LOGO</a>
         </div>
 
         {/* Navigation Links */}
         <nav className={`${styles.navLinks} ${menuOpen ? styles.open : ""}`}>
-           <Link to='/'><a>Home</a></Link>
-                      <Link to="/about"><a >About</a></Link>
-                      <Link to='/bride'>Bride</Link>
-                      <Link to='/groom'><a>Groom</a></Link>
-                      <Link to= "/events"><a>Events</a></Link>
-                      <Link t="/venders"><a>Venders</a></Link>
-                      <Link to = "/news"><a >News</a></Link>
-                      <Link to="/blog"><a>Blog</a></Link>
-                     
-                     <Link to="/contact"><a>Contact</a></Link> 
-                    </nav>
-            
-                    {/* Log In Button */}
-                    <div className={styles.login}>
-                      <Link to="/login"> <a className={styles.loginBtn}>
-                        Log In
-                      </a></Link>
-                    </div>
+          {/* Services Dropdown */}
+          {/* <div
+            className={styles.dropdown}
+            onMouseEnter={() => setDropdownVisible(true)}
+            onMouseLeave={() => setDropdownVisible(false)}
+          >
+            <Link to="#" className={isHomePage ? styles.whiteText : styles.blackText}>
+              Services
+            </Link>
+            {dropdownVisible && (
+              <div className={styles.dropdownMenu}>
+                 <Link to="/events" className={isHomePage ? styles.whiteText : styles.blackText}>
+            Events
+          </Link>
+          <Link to="/venders" className={isHomePage ? styles.whiteText : styles.blackText}>
+            Venders
+          </Link>
+          <Link to="/news" className={isHomePage ? styles.whiteText : styles.blackText}>
+            News
+          </Link>
+          <Link to="/blogs" className={isHomePage ? styles.whiteText : styles.blackText}>
+            Blogs
+          </Link>
+
+              </div>
+            )}
+          </div> */}
+
+          {/* Other Navigation Links */}
+          <Link to="/" className={isHomePage ? styles.whiteText : styles.blackText}>
+            Home
+          </Link>
+          <Link to="/about" className={isHomePage ? styles.whiteText : styles.blackText}>
+            About
+          </Link>
+          <Link to="/bride" className={isHomePage ? styles.whiteText : styles.blackText}>
+            Bride
+          </Link>
+          <Link to="/groom" className={isHomePage ? styles.whiteText : styles.blackText}>
+            Groom
+          </Link>
+          {/* <Link to="/events" className={isHomePage ? styles.whiteText : styles.blackText}>
+            Events
+          </Link>
+          <Link to="/venders" className={isHomePage ? styles.whiteText : styles.blackText}>
+            Venders
+          </Link>
+          <Link to="/news" className={isHomePage ? styles.whiteText : styles.blackText}>
+            News
+          </Link>
+          <Link to="/blogs" className={isHomePage ? styles.whiteText : styles.blackText}>
+            Blogs
+          </Link> */}
+
+
+
+
+          {/* Services Dropdown */}
+          <div
+            className={styles.dropdown}
+            onMouseEnter={() => setDropdownVisible(true)}
+            onMouseLeave={() => setDropdownVisible(false)}
+          >
+            <Link to="#" className={isHomePage ? styles.whiteText : styles.blackText}>
+              Services
+            </Link>
+            {dropdownVisible && (
+             <div className={styles.dropdownMenu}>
+             <Link to="/events" className={isHomePage ? styles.whiteText : styles.blackText}>
+               Events
+             </Link>
+             <Link to="/venders" className={isHomePage ? styles.whiteText : styles.blackText}>
+               Venders
+             </Link>
+             <Link to="/news" className={isHomePage ? styles.whiteText : styles.blackText}>
+               News
+             </Link>
+             <Link to="/blog" className={isHomePage ? styles.whiteText : styles.blackText}>
+               Blogs
+             </Link>
+           </div>
+            )}
+          </div>
+
+          <Link to="/login" className={isHomePage ? styles.whiteText : styles.blackText}>
+            Committee Members
+          </Link>
+          <Link to="/contact" className={isHomePage ? styles.whiteText : styles.blackText}>
+            Contact
+          </Link>
+        </nav>
+
+        {/* Log In Button */}
+        <div className={styles.login}>
+          <Link to="/login" className={isHomePage ? styles.whiteText : styles.blackText}>
+            Log In
+          </Link>
+        </div>
 
         {/* Mobile Menu Toggle */}
         <div className={styles.menuToggle} onClick={toggleMenu}>
