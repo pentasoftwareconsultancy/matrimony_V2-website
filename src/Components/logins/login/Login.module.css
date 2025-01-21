@@ -1,0 +1,105 @@
+/* .login {
+  flex: 1;
+  margin-top: 70px;
+  background: #fce4ec;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+} */
+.main{
+  display: flex;
+}
+.image{
+  width: 100%;
+  height: 100vh;
+}
+.cantainars1{
+  width: 50%;
+  
+}
+.cantainars2{
+  width: 50%;
+  background-image: url("../image/login.svg");
+}
+/* .login{
+  margin-top: 0px;
+  background-image: url("../image/login.svg");
+} */
+ .logos{
+  margin-top: 100px;
+text-align: center;
+ }
+.mainform {
+  display: flex;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 50px;
+  border-radius: 10px;
+  margin-left: 200px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  /* justify-content: center; */
+  flex-direction: column;
+  background-color: white;
+  width: 300px;
+  gap: 10px;
+}
+
+input {
+  
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #e91e63;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #d81b60;
+}
+
+.forgotPassword,
+.register {
+  text-align: center;
+  margin-top: 10px;
+}
+
+a {
+  color: #e91e63;
+  text-decoration: none;
+}
+
+.passwordWrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.passwordWrapper input {
+  width: 93%;
+  margin-top: 8px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+}
+
+.toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  cursor: pointer;
+}

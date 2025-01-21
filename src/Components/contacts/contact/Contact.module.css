@@ -1,0 +1,177 @@
+.contactForm {
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 80px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    background-image: url(../../bride/images/frower1.webp) ;
+   /* background-image-size: 70vh; */
+        border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .main{
+    display: flex;
+    gap: 30px;
+  }
+  .contaner1{
+    padding-left: 150px;
+    width: 40%;
+  }
+  .contaner2{
+    width: 30%;
+padding-left: 70px;
+padding-right: 100px;
+
+  }
+  .contactInfo{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    margin-top: 25px;
+    padding-right: 70px;
+    box-shadow: 0 4px 8px 0 rgb(107, 106, 106);
+    background-color: white;
+    text-align: center;
+
+  }
+  .contact{
+    font-size: 30px;
+  }
+  .add{
+    margin-top: 10px;
+  }
+ .emain{
+   margin-top: 10px;
+  }
+  .mobile{
+margin-top: 10px;
+  }
+  .time{
+margin-top: 10px;
+  }
+  .sunday{
+    margin-top: 10px;
+  }
+  .contactForm h2 {
+    text-align: center;
+    color:black;
+    margin-bottom: 20px;
+    font-size: 35px;
+  }
+  
+  .contactForm label {
+    font-size: 20px;
+    display: block;
+    margin-bottom: 8px;
+    color: black;
+    font-weight: bold;
+  }
+  
+  .contactForm input,
+  .contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+  
+  .contactForm textarea {
+    resize: vertical;
+    height: 100px;
+  }
+  
+  .recaptcha {
+    display: flex;
+    /* padding-left: 200px;
+    padding-right: 100px; */
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .recaptcha input {
+ padding-left: 300px;
+  }
+  .robot{
+  width: 20vh;
+  }
+  
+  .contactForm button {
+    width: 50%;
+    margin-left: 70px;
+    /* justify-content: center; */
+    padding: 10px;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 15px 0 15px 15px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .contactForm button:hover {
+    background-color:purple;
+  }
+
+
+  /* Media Queries */
+
+/* Large Tablets and Small Desktops */
+@media (max-width: 1024px) {
+    .contactForm {
+      width: 85%; /* Slightly reduce form width */
+    }
+  
+    .contaner1,
+    .contaner2 {
+      width: 100%; /* Full width for smaller devices */
+      padding: 0;
+    }
+  }
+  
+  /* Tablets */
+  @media (max-width: 768px) {
+    .contactForm {
+      width: 90%;
+    }
+  
+    .main {
+      flex-direction: column; /* Stack sections vertically */
+      gap: 20px;
+    }
+  
+    .contaner1,
+    .contaner2 {
+      padding: 0;
+    }
+  
+    .contactInfo {
+      padding: 15px;
+      text-align: left; /* Align text for better readability */
+    }
+  
+    .contactForm button {
+      font-size: 14px;
+    }
+  }
+  
+  /* Mobile Phones */
+  @media (max-width: 480px) {
+    .contactForm {
+      width: 95%; /* Reduce width for mobile */
+      margin-top: 50px;
+    }
+  
+    .contactInfo {
+      text-align: center; /* Center-align for smaller screens */
+      padding: 10px;
+    }
+  
+    .contactForm button {
+      font-size: 12px; /* Adjust button size */
+      padding: 8px;
+    }
+  }

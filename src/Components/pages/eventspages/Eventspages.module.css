@@ -1,0 +1,32 @@
+/* src/components/pages/eventspages/Eventspages.module.css */
+
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  .eventGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .heading {
+      font-size: 2rem;
+    }
+  
+    .eventGrid {
+      grid-template-columns: 1fr;
+    }
+  }
+  

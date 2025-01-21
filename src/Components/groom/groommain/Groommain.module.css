@@ -1,0 +1,10 @@
+.Bridemain{
+    display: flex;
+    margin-top: 70px;
+}
+.main{
+    width: 30%;
+}
+.containmain{
+    width: 60%;
+}

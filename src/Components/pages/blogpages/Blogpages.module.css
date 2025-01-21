@@ -1,0 +1,19 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
+    gap: 20px; /* Adds space between grid items */
+    padding: 20px; /* Adds padding around the grid */
+  }
+  
+  @media (max-width: 1024px) {
+    .container {
+      grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns on medium screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      grid-template-columns: 1fr; /* Switch to 1 column on small screens */
+    }
+  }
+  

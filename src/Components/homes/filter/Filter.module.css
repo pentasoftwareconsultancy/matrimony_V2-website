@@ -1,0 +1,76 @@
+/* FilterForm.module.css */
+.filters {
+  /* box-shadow: 4px 0 5px 2px; */
+  border: 1px solid black;
+  margin-top: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+  padding-left: 100px;
+  padding-right: 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  gap: 16px; /* Space between grid items */
+}
+
+.label {
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column; /* Ensure label text is above the dropdown */
+  margin-bottom: 4px;
+}
+.aply {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  width: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  
+  /* Center the button */
+ /* Ensures the button spans all columns in the grid */
+  justify-self: center; /* Centers the button horizontally */
+}
+
+.aply:hover {
+  background-color: #0056b3;
+}
+
+
+.select {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+
+@media (max-width: 768px) {
+  /* For mobile view */
+  .filterForm {
+    margin-left: 10px; /* Reduce margins */
+    margin-right: 10px;
+    padding-left: 10px; /* Reduce padding */
+    padding-right: 10px;
+    grid-template-columns: 1fr; /* Stack items vertically */
+    padding-top: 20px; /* Reduce top padding */
+    padding-bottom: 20px; /* Reduce bottom padding */
+  }
+
+  .label {
+    font-size: 14px; /* Smaller font size */
+    margin-bottom: 8px; /* Add more space below labels */
+  }
+
+  .select {
+    padding: 10px; /* Increase padding inside select for easier touch input */
+    font-size: 16px; /* Increase font size for readability */
+  }
+}

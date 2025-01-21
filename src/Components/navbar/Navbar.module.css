@@ -1,0 +1,118 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
+  box-shadow: none;
+}
+
+/* .header.scrolled {
+  background-color: rgba(67, 66, 66, 0.8);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: white;
+} */
+
+.header.scrolled {
+  background-color: rgba(67, 66, 66, 0.8); /* Example: Semi-transparent black */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.header.scrolled .logo a,
+.header.scrolled .navLinks a,
+.header.scrolled .loginBtn{
+  color: white; /* Change text color to white when scrolled */
+}
+
+.header.scrolled .bar{
+  background-color: aliceblue;
+}
+.header.scrolled .navLinks a:hover {
+  color: #f4a261; /* Optional: Change hover color for scrolled state */
+}
+
+.navbar {
+  display: flex;
+ 
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  
+}
+
+.logo a {
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(9, 9, 9);
+  text-decoration: none;
+}
+
+.navLinks {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.navLinks a {
+  color: rgb(11, 11, 11);
+ font-weight: 600;
+
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.navLinks a:hover {
+  color: #f4a261; /* Example hover color */
+}
+
+.navLinks.open {
+  display: flex; /* Style for mobile menu when open */
+}
+
+.menuToggle {
+  display: none;
+  cursor: pointer;
+  
+  flex-direction: column;
+  gap: 5px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: rgb(12, 12, 12);
+  border-radius: 2px;
+}
+
+.loginBtn {
+  color: white;
+  text-decoration: none;
+  background-color: #e76f51;
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.loginBtn:hover {
+  background-color: #f4a261;
+}
+
+/* For responsiveness */
+@media (max-width: 768px) {
+  .navLinks {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .menuToggle {
+    display: flex;
+  }
+}
