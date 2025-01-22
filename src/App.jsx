@@ -3,7 +3,7 @@ import { Routes, Route, useLocation, BrowserRouter } from "react-router-dom";
 import Navbarmain from "./Components/navbarmain/Navbarmain";
 import Homepages from "./Components/pages/home/Homepages";
 import Aboutpages from "./Components/pages/aboutpages/Aboutpages";
-import Bridepages from "./Components/pages/bridepages/bridepages";
+// import Bridepages from "./Components/pages/bridepages/bridepages";
 import Groompages from "./Components/pages/groompages/Groompages";
 import ProfileComponent from "./Components/bride/profilecomponent/Profilecomponent";
 import Groombiodata from "./Components/groom/groombiodata/Groombiodata";
@@ -36,7 +36,7 @@ function AppContent() {
       <Routes>
         <Route path="/" element={<Homepages />} />
         <Route path="/about" element={<Aboutpages />} />
-        <Route path="/bride" element={<Bridepages />} />
+        {/* <Route path="/bride" element={<Bridepages />} /> */}
         <Route path="/groom" element={<Groompages />} />
         <Route path="/profile/:index" element={<ProfileComponent />} />
         <Route path="/profilegroom/:index" element={<Groombiodata />} />
