@@ -55,6 +55,10 @@ const VendorDetail = () => {
       ) : (
         <p>No participants listed for this vendor.</p>
       )}
+      <div className={styles.gallary}>
+      <img src={vendor.image} alt={vendor.title} className={styles.gallaryimg} />
+      <img src={vendor.images} alt={vendor.title} className={styles.gallaryimg} />
+      </div>
     </div>
   );
 };

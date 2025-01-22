@@ -1,11 +1,21 @@
+import image1 from "../image/image.jpg"
+import image2 from "../image/music.webp"
+import image3 from "../image/salon.jpg"
+import image4 from "../image/shop.jpg"
+import image5 from "../image/image2.jpg"
 const vendors = [
   {
     id: 1,
-    title: "Elegant Mandap Services",
+    title: "vajantri",
+    name:"XYZ",
+    images:image5,
+    phone:"8709878598",
+    service:"",
+    address:"123 Main St, Cityville",
     category: "Mandap",
     description: "Providing elegant and customizable mandaps for your special events.",
     content: "We offer traditional and modern mandap designs to match your event theme.",
-    image: "path/to/mandap.jpg",
+    image: image1,
     date: "2025-01-25",
     time: "10:00 AM",
     place: "City Convention Center",
@@ -23,6 +33,7 @@ const vendors = [
         attendanceConfirmed: true,
         feedback: "Loved the variety of designs available.",
       },
+      
     ],
   },
   {
@@ -31,7 +42,7 @@ const vendors = [
     category: "Vajantri",
     description: "Music to make your moments memorable.",
     content: "Specialized in traditional wedding music with experienced musicians.",
-    image: "path/to/vajantri.jpg",
+    image: image2,
     date: "2025-02-01",
     time: "6:00 PM",
     place: "Downtown Music Hall",
@@ -44,7 +55,7 @@ const vendors = [
     category: "Bhojanal",
     description: "Tasty and hygienic catering services.",
     content: "We provide multi-cuisine catering with a variety of menu options.",
-    image: "path/to/caterers.jpg",
+    image: image3,
     date: "2025-02-10",
     time: "12:00 PM",
     place: "Event Plaza",
@@ -57,7 +68,7 @@ const vendors = [
     category: "Loan",
     description: "Finance your dream events easily.",
     content: "Get hassle-free event loans with minimal documentation.",
-    image: "path/to/loans.jpg",
+    image: image4,
     date: "2025-02-15",
     time: "2:00 PM",
     place: "Finance Hub",

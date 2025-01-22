@@ -1,5 +1,5 @@
 .cardDetail {
-    max-width: 800px;
+    max-width: 80%;
     margin: 40px auto;
     padding: 20px;
     background-color: #ffffff;
@@ -16,13 +16,22 @@
   }
   
   .image {
-    flex: 1 1 300px;
-    max-width: 300px;
+    flex: 1 1 400px;
+    max-width: 550px;
     border-radius: 8px;
     object-fit: cover;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
-  
+  .gallary{
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .gallaryimg{
+    border-radius: 0 60px 0 60px;
+    margin-left: 20px;
+    width: 30%;
+    height: 40vh;
+  }
   .textContent {
     flex: 2;
     display: flex;
