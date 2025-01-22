@@ -1,9 +1,9 @@
 import React from "react";
-import eventsData from "../../events/eventsdata/Eventdata";
-import EventCard from "../../events/eventcard/Eventscard";
+import eventsData from "../../Components/events/eventsdata/Eventdata";
+import EventCard from "../../Components/events/eventcard/Eventscard";
 import styles from "./Eventspages.module.css"; 
-import Eventshero from "../../events/eventshero/Eventshero";
-import Eventfilter from "../../events/eventfilter/Eventfilter";
+import Eventshero from "../../Components/events/eventshero/Eventshero";
+import Eventfilter from "../../Components/events/eventfilter/Eventfilter";
 const Eventspages = () => {
   return (
     

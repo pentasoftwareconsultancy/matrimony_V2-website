@@ -5,8 +5,6 @@ import styles from "./VendorCard.module.css";
 const VendorCard = ({ vendor = {} }) => {
   const { id, title, description, image, date, time } = vendor;
 
-  
-
   return (
     <div className={styles.card}>
       <img src={image} alt={title} className={styles.image} />

@@ -1,13 +1,15 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import vendors from "../vendorsdata/Vendorsdata";
 import styles from "./Vendorsdetail.module.css";
+import vendors from "../vendorsdata/Vendorsdata"; // Vendors data imported here
 
 const VendorDetail = () => {
   const { id } = useParams();
   const vendor = vendors.find((item) => item.id === parseInt(id, 10));
 
- 
+  if (!vendor) {
+    return <p>Vendor not found.</p>;
+  }
 
   return (
     <div className={styles.cardDetail}>

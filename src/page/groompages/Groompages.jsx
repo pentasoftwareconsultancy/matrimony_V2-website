@@ -1,5 +1,5 @@
 import React from 'react'
-import Groommain from '../../groom/groommain/Groommain'
+import Groommain from '../../Components/groom/groommain/Groommain'
 
 function Groompages() {
   return (

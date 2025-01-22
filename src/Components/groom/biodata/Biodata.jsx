@@ -1,78 +1,49 @@
-import { FaCamera, FaFilm, FaDumbbell, FaHandsHelping } from "react-icons/fa";
-import image from "../../groom/images/boys5.jpg"
-const profileDatas = [
-  
-    {
-        id:2,
-      name: "Drashan S",
-      age: 24,
-      height: "5'3\"",
-      status: "Never Married",
-      location: "Chambhar, Maharashtra",
-      job: "Software Developer / Programmer",
-      bio: "A little about me, I have completed my B.E and work in IT.",
-      image: image,
-      hobbies: ["Photography", "Movies", "Working Out", "Social Service"],
-      Photography: FaCamera,
-      Movies: FaFilm,
-      WorkingOut: FaDumbbell,
-      SocialService: FaHandsHelping,
-      contact: {
-        phone: "+91 9876543210",
-        email: "drashana@example.com",
-      },
-      family: {
-        father: "Engineer",
-        mother: "Teacher",
-        siblings: "1 brother",
-      },
-      preferences: {
-        age: "25 to 30",
-        height: "5'5\" to 6'0\"",
-        maritalStatus: "Never Married",
-        gothra: "Don't include my Gothra",
-        religion: "Hindu",
-        motherTongue: "Marathi",
-        country: "India",
-        state: "Maharashtra",
-      },
-    },
-    {
-      id:3,
-    name: "Drashan",
-    age: 24,
-    height: "5'3\"",
+import image from "../../bride/images/girl1.webp";
+import image1 from "../../bride/images/girl2.webp";
+import image2 from "../../bride/images/girl3.jpg";
+import image3 from "../../bride/images/girl4.jpg";
+
+const Groomdata = [
+  {
+    name: "Priyanka J",
+    age: 27,
+    birthdate: "20-Nov-1998",
+    height: "5'4\"",
     status: "Never Married",
-    location: "Chambhar, Maharashtra",
-    job: "Software Developer / Programmer",
-    bio: "A little about me, I have completed my B.E and work in IT.",
-    image: image,
+    location: "Pune, Maharashtra",
+    job: "Customer Support / BPO",
+    bio: "I describe myself as someone who's caring, trendy, smart, and more...",
+    image: image1,
+    education: "B.A. in English",
+    occupation: "Customer Support / BPO",
+    income: "₹400,000",
+    workLocation: "Pune, Maharashtra",
+    nativePlace: "Nagpur, Maharashtra",
     hobbies: ["Photography", "Movies", "Working Out", "Social Service"],
-    Photography: FaCamera,
-    Movies: FaFilm,
-    WorkingOut: FaDumbbell,
-    SocialService: FaHandsHelping,
     contact: {
-      phone: "+91 9876543210",
-      email: "drashana@example.com",
+      phone: "+91 1234567890",
+      email: "priyanka@example.com"
     },
+    
     family: {
-      father: "Engineer",
-      mother: "Teacher",
-      siblings: "1 brother",
+      father: "Businessman",
+      mother: "Housewife",
+      siblings: "1 brother, 1 sister"
     },
     preferences: {
-      age: "25 to 30",
-      height: "5'5\" to 6'0\"",
+      age: "24 to 32",
+      height: "5'10\" to 7'0\"",
       maritalStatus: "Never Married",
       gothra: "Don't include my Gothra",
-      religion: "Hindu",
-      motherTongue: "Marathi",
+      religion: "Sikh, Hindu",
+      motherTongue: "Hindi",
       country: "India",
-      state: "Maharashtra",
-    },
+      state: "Chhattisgarh, Delhi-NCR, Haryana, Madhya Pradesh, Uttar Pradesh"
+    }
   },
-  ];
-  
-  export default profileDatas;
-  
+  // Add more female profiles here
+];
+
+export default Groomdata;
+
+

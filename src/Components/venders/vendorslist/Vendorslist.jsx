@@ -1,14 +1,13 @@
 import React from "react";
-import VendorCard from "../VendorCard/VendorCard";
-import styles from "./VendorList.module.css";
-import vendors from "../vendorsdata/Vendorsdata";
+import Vendorcard from "../vendorscard/Vendorcard";
+import styles from "./vendorslist.module.css";
 
-const VendorList = () => {
+const VendorList = ({ vendors }) => {
   return (
     <div className={styles.container}>
       <div className={styles.cardGrid}>
         {vendors.map((vendor) => (
-          <VendorCard key={vendor.id} vendor={vendor} />
+          <Vendorcard key={vendor.id} vendor={vendor} />
         ))}
       </div>
     </div>
