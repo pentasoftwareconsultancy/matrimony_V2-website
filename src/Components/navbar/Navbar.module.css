@@ -21,7 +21,7 @@
   background: rgba(0, 0, 0, 0.5);
 }
 .header.scrolled .navLinks a:hover {
-  color: #ffd700; /* Gold hover color for scrolled state */
+  color: #ff0037; /* Gold hover color for scrolled state */
 }
 
 /* Text color for Homepage (White) */
@@ -36,7 +36,7 @@
 
 /* Navbar Links Hover State */
 .header .navLinks a:hover {
-  color: #f4a261; /* Add hover effect */
+  color: #383737; /* Add hover effect */
 }
 
 /* Navbar Links in Scrolled State */

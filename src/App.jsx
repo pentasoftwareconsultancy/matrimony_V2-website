@@ -22,6 +22,8 @@ import Eventspages from './Components/pages/eventspages/Eventspages';
 import Eventscard from "./Components/events/eventcard/Eventscard";
 import Eventdetail from './Components/events/eventsdetail/Eventsdetail';
 import GroomProfile from './Components/groom/groomprofile/Groomprofile';
+import Vendorpages from './Components/pages/vendorpages/Vendorpages';
+import VendorDetail from './Components/venders/Vendordetail/Vendordetail';
 
 function App() {
   const location = useLocation();
@@ -54,6 +56,8 @@ function App() {
         <Route path="/card-detail/:id" element={<Newcardpage />} />
         <Route path="/profilegroom/:id" element={<Groombiodata />} />
         <Route path="/groomprofile" element={<GroomProfile />} />
+        <Route path="/vendor" element={<Vendorpages/>}/>
+        <Route path="/vendor-detail/:id" element={<VendorDetail/>}/>
       </Routes>
       <Footer />
     </>
