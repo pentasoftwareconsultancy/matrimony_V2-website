@@ -12,23 +12,23 @@ const Groomprofile = ({ profile }) => {
       <div className={styles.content}>
         <div className={styles.image}>
           <img
-            src={profile.image || "https://via.placeholder.com/100"}
-            alt={profile.name || "Avatar"}
+            src={data.image || "https://via.placeholder.com/100"}
+            alt={datae.name || "Avatar"}
             className={styles.avatar}
           />
         </div>
         <div className={styles.info}>
           <div className={styles.header}>
-            <h2>{profile.name}</h2>
+            <h2>{data.name}</h2>
           </div>
           <div className={styles.main}>
-            <p><strong>Caste:</strong> {profile.caste || "N/A"}</p>
-            <p><strong>Age / Height:</strong> {profile.age || "N/A"} / {profile.height || "N/A"}</p>
-            <p><strong>Education:</strong> {profile.education || "N/A"}</p>
-            <p><strong>Occupation:</strong> {profile.occupation || "N/A"}</p>
-            <p><strong>Annual Income:</strong> {profile.income || "N/A"}</p>
-            <p><strong>Work Location:</strong> {profile.workLocation || "N/A"}</p>
-            <p><strong>Native Place:</strong> {profile.nativePlace || "N/A"}</p>
+            <p><strong>Caste:</strong> {data.caste || "N/A"}</p>
+            <p><strong>Age / Height:</strong> {data.age || "N/A"} / {data.height || "N/A"}</p>
+            <p><strong>Education:</strong> {data.education || "N/A"}</p>
+            <p><strong>Occupation:</strong> {data.occupation || "N/A"}</p>
+            <p><strong>Annual Income:</strong> {data.income || "N/A"}</p>
+            <p><strong>Work Location:</strong> {data.workLocation || "N/A"}</p>
+            <p><strong>Native Place:</strong> {data.nativePlace || "N/A"}</p>
           </div>
           <button className={styles.connect}>Connect Now</button>
         </div>

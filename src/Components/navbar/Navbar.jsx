@@ -120,7 +120,7 @@ const Navbar = ({ isHomePage }) => {
             )}
           </div>
 
-          <Link to="/login" className={isHomePage ? styles.whiteText : styles.blackText}>
+          <Link to="/member" className={isHomePage ? styles.whiteText : styles.blackText}>
             Committee Members
           </Link>
           <Link to="/contact" className={isHomePage ? styles.whiteText : styles.blackText}>

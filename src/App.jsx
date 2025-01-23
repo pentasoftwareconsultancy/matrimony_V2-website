@@ -26,6 +26,8 @@ import Vendorpages from "./page/vendorpages/Vendorpages";
 import { FaBridge } from "react-icons/fa6";
 import Bridepages from "./page/bridepages/Bridepages";
 import VendorDetail from "./Components/venders/Vendordetail/Vendordetail";
+import MemberPage from "./page/memberpages/Memberpages";
+import MemberDetail from "./Components/member/memberdetail/Memberdetail";
 
 function AppContent() {
   const location = useLocation();
@@ -60,10 +62,9 @@ function AppContent() {
         <Route path="/groomprofile" element={<GroomProfile />} />
         <Route path="/vendor" element={<Vendorpages/>}/>
         {/* <Route path="/vendor-detail/:id" element={<VendorDetail/>}/> */}
-        <Route
-          path="/vendor-detail/:id"
-          element={<VendorDetail/>}
-        />
+        <Route path="/vendor-detail/:id" element={<VendorDetail/>} />
+        <Route path="/member" element={<MemberPage/>}/>
+        <Route path="/members/:id" element={<MemberDetail />} />
       </Routes>
       <Footer />
     </>

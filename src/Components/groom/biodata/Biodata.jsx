@@ -1,7 +1,7 @@
-import image from "../../bride/images/girl1.webp";
-import image1 from "../../bride/images/girl2.webp";
-import image2 from "../../bride/images/girl3.jpg";
-import image3 from "../../bride/images/girl4.jpg";
+import image1 from "../../bride/images/girl1.webp";
+import image2 from "../../bride/images/girl2.webp";
+import image3 from "../../bride/images/girl3.jpg";
+import image4 from "../../bride/images/girl4.jpg";
 
 const Groomdata = [
   {
@@ -22,13 +22,12 @@ const Groomdata = [
     hobbies: ["Photography", "Movies", "Working Out", "Social Service"],
     contact: {
       phone: "+91 1234567890",
-      email: "priyanka@example.com"
+      email: "priyanka@example.com",
     },
-    
     family: {
       father: "Businessman",
       mother: "Housewife",
-      siblings: "1 brother, 1 sister"
+      siblings: "1 brother, 1 sister",
     },
     preferences: {
       age: "24 to 32",
@@ -38,12 +37,81 @@ const Groomdata = [
       religion: "Sikh, Hindu",
       motherTongue: "Hindi",
       country: "India",
-      state: "Chhattisgarh, Delhi-NCR, Haryana, Madhya Pradesh, Uttar Pradesh"
-    }
+      state: "Chhattisgarh, Delhi-NCR, Haryana, Madhya Pradesh, Uttar Pradesh",
+    },
   },
-  // Add more female profiles here
+  {
+    name: "Sakshi V",
+    age: 25,
+    birthdate: "15-Aug-1998",
+    height: "5'6\"",
+    status: "Never Married",
+    location: "Mumbai, Maharashtra",
+    job: "Software Developer",
+    bio: "An ambitious and independent individual, working in the tech industry.",
+    image: image2,
+    education: "B.Tech in Computer Science",
+    occupation: "Software Developer",
+    income: "₹800,000",
+    workLocation: "Mumbai, Maharashtra",
+    nativePlace: "Nashik, Maharashtra",
+    hobbies: ["Reading", "Traveling", "Music", "Art"],
+    contact: {
+      phone: "+91 9876543210",
+      email: "sakshi@example.com",
+    },
+    family: {
+      father: "Engineer",
+      mother: "Doctor",
+      siblings: "2 sisters",
+    },
+    preferences: {
+      age: "25 to 30",
+      height: "5'8\" to 6'2\"",
+      maritalStatus: "Never Married",
+      gothra: "N/A",
+      religion: "Hindu",
+      motherTongue: "Marathi",
+      country: "India",
+      state: "Maharashtra, Gujarat",
+    },
+  },
+  {
+    name: "Aditi K",
+    age: 28,
+    birthdate: "10-Jul-1995",
+    height: "5'5\"",
+    status: "Never Married",
+    location: "Delhi, India",
+    job: "Marketing Manager",
+    bio: "A creative and motivated professional working in the marketing field.",
+    image: image3,
+    education: "MBA in Marketing",
+    occupation: "Marketing Manager",
+    income: "₹1,200,000",
+    workLocation: "Delhi, India",
+    nativePlace: "Lucknow, Uttar Pradesh",
+    hobbies: ["Yoga", "Writing", "Traveling"],
+    contact: {
+      phone: "+91 1122334455",
+      email: "aditi@example.com",
+    },
+    family: {
+      father: "Retired Professor",
+      mother: "Homemaker",
+      siblings: "1 brother",
+    },
+    preferences: {
+      age: "28 to 35",
+      height: "5'9\" to 6'3\"",
+      maritalStatus: "Never Married",
+      gothra: "Not Applicable",
+      religion: "Hindu",
+      motherTongue: "Hindi",
+      country: "India",
+      state: "Delhi-NCR, Uttar Pradesh, Rajasthan",
+    },
+  },
 ];
 
 export default Groomdata;
-
-
