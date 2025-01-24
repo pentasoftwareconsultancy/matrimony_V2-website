@@ -54,31 +54,7 @@ const Section = () => {
       </div>
       </div>
 
-    //         </div>
-    //         </div>
-    //   <div className={styles.method}>
-    //     <h2 className={styles.title}>
-    //       <span className={styles.heartIcon}>❤️</span> The BVowed Method
-    //     </h2>
-    //     <p className={styles.subtitle}>As simple as 1, 2, 3!</p>
-    //     <div className={styles.step}>
-         
-    //       <p className={styles.stepDescription}>
-    //         BVowed is an exclusive platform for singles looking for a life partner. Tell us about yourself and go through our stringent verification process to become a BVowed member.
-    //       </p>
-          
-    //     </div>
-    //     <div className={styles.joinUs}>
-    //       <h3 className={styles.joinTitle}>Join Us Today</h3>
-    //       <p className={styles.joinText}>
-    //         Learn more about our exclusive platform and take your first step to finding your life partner.
-    //       </p>
-    //       <button className={styles.registerButton}>Register Now</button>
-    //     </div>
-    //   </div>
-    //   <p className={styles.footerText}>✨ We have 15,000+ members online!</p>
-    //   </section>
-      
+ 
   );
 };
 

@@ -77,18 +77,7 @@ const Navbar = ({ isHomePage }) => {
           <Link to="/groom" className={isHomePage ? styles.whiteText : styles.blackText}>
             Groom
           </Link>
-          {/* <Link to="/events" className={isHomePage ? styles.whiteText : styles.blackText}>
-            Events
-          </Link>
-          <Link to="/venders" className={isHomePage ? styles.whiteText : styles.blackText}>
-            Venders
-          </Link>
-          <Link to="/news" className={isHomePage ? styles.whiteText : styles.blackText}>
-            News
-          </Link>
-          <Link to="/blogs" className={isHomePage ? styles.whiteText : styles.blackText}>
-            Blogs
-          </Link> */}
+        
 
 
 
@@ -110,9 +99,9 @@ const Navbar = ({ isHomePage }) => {
              <Link to="/vendor" className={isHomePage ? styles.whiteText : styles.blackText}>
                Vendors
              </Link>
-             <Link to="/news" className={isHomePage ? styles.whiteText : styles.blackText}>
+             {/* <Link to="/news" className={isHomePage ? styles.whiteText : styles.blackText}>
                News
-             </Link>
+             </Link> */}
              <Link to="/blog" className={isHomePage ? styles.whiteText : styles.blackText}>
                Blogs
              </Link>

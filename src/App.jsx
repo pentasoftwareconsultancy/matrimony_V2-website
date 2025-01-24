@@ -51,7 +51,7 @@ function AppContent() {
         <Route path="/login" element={<Login />} />
         <Route path="/blog" element={<Blogpages />} />
         <Route path="/blog/:id" element={<Blogmaincard />} />
-        <Route path="/news" element={<Newspages />} />
+        {/* <Route path="/news" element={<Newspages />} /> */}
         <Route path="/register" element={<Step />} />
         <Route path="/events" element={<Eventspages />} />
         <Route path="/event-detail/:id" element={<Eventdetail />} />

@@ -1,0 +1,23 @@
+.container {
+    /* margin-left: 100px;
+    margin-right: 50px; */
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns */
+    gap: 40px; /* Space between grid items */
+    padding: 16px; /* Add padding around the container */
+  }
+  
+  @media (max-width: 768px) {
+    /* For smaller screens, reduce to 2 columns */
+    .container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* For very small screens, switch to 1 column */
+    .container {
+      grid-template-columns: 1fr;
+    }
+  }
+  

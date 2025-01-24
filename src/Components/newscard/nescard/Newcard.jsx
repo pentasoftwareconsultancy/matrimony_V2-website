@@ -4,6 +4,8 @@ import styles from "./Newcard.module.css"; // Make sure this path is correct
 
 const Newcard = ({ id, title, description, author, content, image }) => {
   return (
+    <div className={styles.main}>
+
     <div className={styles.card}>
       <img src={image} alt={title} className={styles.image} />
       <div className={styles.content}>
@@ -14,6 +16,8 @@ const Newcard = ({ id, title, description, author, content, image }) => {
           Read More
         </Link>
       </div>
+    </div>
+
     </div>
   );
 };

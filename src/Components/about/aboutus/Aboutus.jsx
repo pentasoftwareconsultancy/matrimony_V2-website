@@ -6,31 +6,37 @@ const Aboutus = () => {
     <div className={styles.container}>
       <div className={styles.textSection}>
         <h2>About Us</h2>
-        <p>
-          You have the option to select one of our two exclusive formats. If you
-          need help in deciding, reach out to us and we would be happy to help you.
+        <p className={styles.text}>
+          Welcome to [Your Matrimony Website Name] — your trusted partner in finding lifelong companionship and love.
         </p>
         <p>
-          Round the Room events are currently offered to people in Delhi/NCR,
-          Mumbai, and Bangalore. Each of our bespoke Round the Room events has
-          handpicked attendees who make it to the event by invite only. This is
-          to ensure that at least the odds are in your favor, giving you a great
-          chance to hold a conversation and eventually vibe with someone whose
-          nuttiness matches your own.
+          At [Your Matrimony Website Name], we understand that marriage is one of the most important milestones in a person’s life. That's why we have created a platform that is dedicated to helping individuals find their perfect match based on shared values, interests, and aspirations.
         </p>
-        <ul>
-          <li>Register your profile</li>
-          <li>Accept invite to the event</li>
-          <li>
-            Meet each and every person in the event through a structured format
-          </li>
-          <li>Let us know who you would like to continue the conversation with</li>
-        </ul>
-        <p className={styles.note}>
-          Please note – We share your contact information after the event, only in
-          case of mutual interest shown by both individuals.
+        <p>
+          Our mission is to provide a seamless, secure, and respectful experience for all users in their quest for love and companionship. Whether you are looking for a traditional match or something modern and flexible, we offer a variety of services to suit your needs.
         </p>
       </div>
+
+      {/* Our Values Section */}
+      <div className={styles.valuesSection}>
+        <h3>Our Values</h3>
+        <ul className={styles.valuesList}>
+          <li>
+            <strong>Trust and Security:</strong> Your safety and privacy are our top priority. We take great care in ensuring that your personal information is kept secure.
+          </li>
+          <li>
+            <strong>Personalized Matchmaking:</strong> We understand that every person is unique, so we offer advanced algorithms that match you based on your preferences and values.
+          </li>
+          <li>
+            <strong>Respect for Diversity:</strong> We celebrate the diversity of cultures, religions, and backgrounds, offering a platform where everyone can find a match that aligns with their beliefs and traditions.
+          </li>
+          <li>
+            <strong>Commitment to Service:</strong> Our dedicated support team is always ready to assist you, ensuring your journey towards finding love is smooth and enjoyable.
+          </li>
+        </ul>
+      </div>
+
+      {/* Stats Section */}
       <div className={styles.statsSection}>
         <div className={styles.stat}>
           <span className={styles.statNumber}>2M</span>

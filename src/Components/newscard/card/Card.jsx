@@ -4,6 +4,7 @@ import styles from "./Card.module.css";
 import newData from "../newdata/Newdata"; // Import data
 
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import Banner from "../banner/Banner";
 
 const Card = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -24,6 +25,8 @@ const Card = () => {
 
   return (
     <div className={styles.container}>
+      <div className={styles.main}>
+        {/* <div className={styles.container1}><Banner/></div> */}
       <div className={styles.cardGrid}>
         {currentCards.map((card) => (
           <Newcard
@@ -37,7 +40,8 @@ const Card = () => {
           />
         ))}
       </div>
-
+      {/* <div className={styles.container2}><Banner/></div> */}
+      </div>
       {/* Pagination Controls */}
       <div className={styles.pagination}>
         <button
