@@ -1,4 +1,3 @@
-import React from "react";
 import Vendorcard from "../vendorscard/Vendorcard";
 import styles from "./vendorslist.module.css";
 
@@ -7,7 +6,7 @@ const VendorList = ({ vendors }) => {
     <div className={styles.container}>
       <div className={styles.cardGrid}>
         {vendors.map((vendor) => (
-          <Vendorcard key={vendor.id} vendor={vendor} />
+          <Vendorcard key={vendor._id} vendor={vendor} />
         ))}
       </div>
     </div>

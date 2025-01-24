@@ -1,13 +1,41 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import VendorList from "../../Components/venders/vendorslist/Vendorslist";
-import vendors from "../../Components/venders/vendorsdata/Vendorsdata";
+import styles from "./Vendorpages.module.css";
 
-function Vendorpages() {
+const Vendorpages = () => {
+  const [vendors, setVendors] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+
+  // Fetch vendors from the backend
+  useEffect(() => {
+    const fetchVendors = async () => {
+      try {
+        const response = await fetch("http://localhost:8000/api/v1/vendors");
+        const data = await response.json();
+        if (data.success) {
+          setVendors(data.data); // Populate vendors from API response
+        } else {
+          setError(data.message || "Failed to fetch vendors.");
+        }
+      } catch (err) {
+        setError("Error fetching vendors: " + err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchVendors();
+  }, []);
+
+  if (loading) return <p>Loading vendors...</p>;
+  if (error) return <p>{error}</p>;
+
   return (
-    <div>
+    <div className={styles.container}>
       <VendorList vendors={vendors} />
     </div>
   );
-}
+};
 
 export default Vendorpages;

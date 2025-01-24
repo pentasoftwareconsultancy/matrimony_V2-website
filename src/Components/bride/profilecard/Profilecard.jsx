@@ -1,47 +1,45 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import styles from "./ProfileCard.module.css";
 
 const ProfileCard = ({ profile }) => {
+  const navigate = useNavigate(); // Hook for navigation
+
+  const handleCardClick = () => {
+    navigate(`/profile/${profile._id}`); // Navigate to the detailed profile page with the ID
+  };
+
   return (
-    <div className={styles.card}>
-     
+    <div className={styles.card} onClick={handleCardClick}>
       <div className={styles.content}>
         <div className={styles.image}>
           <img
-            src={profile.image || "https://via.placeholder.com/100"}
-            alt={profile.name || "Avatar"}
+            src={
+              profile.finalStepDetails?.profilePhoto ||
+              "https://via.placeholder.com/100"
+            }
+            alt={profile.fullName || "Avatar"}
             className={styles.avatar}
           />
         </div>
         <div className={styles.info}>
-        <div className={styles.header}>
-        <h2>{profile.name}</h2>
-      </div>
-      <div className={styles.main}>
+          <h2>{profile.fullName}</h2>
           <p>
-            <strong>Caste:</strong> {profile.caste || "N/A"}
+            <strong>Age:</strong> {profile.email} 
+            {profile.mobileNumber}
           </p>
           <p>
-            <strong>Age / Height:</strong> {profile.age || "N/A"} /{" "}
-            {profile.height || "N/A"}
+            <strong>Date of birth:</strong>
+            {profile.dateOfBirth}
           </p>
           <p>
-            <strong>Education:</strong> {profile.education || "N/A"}
+            <strong>Location:</strong>
+            {profile.city}
           </p>
           <p>
-            <strong>Occupation:</strong> {profile.occupation || "N/A"}
+            <strong>Annual Income:</strong>
+            {profile.annualIncome}
           </p>
-          <p>
-            <strong>Annual Income:</strong> {profile.income || "N/A"}
-          </p>
-          <p>
-            <strong>Work Location:</strong> {profile.workLocation || "N/A"}
-          </p>
-          <p>
-            <strong>Native Place:</strong> {profile.nativePlace || "N/A"}
-          </p>
-          </div>
-          <button className={styles.connect} >Connect Now</button>
         </div>
       </div>
     </div>

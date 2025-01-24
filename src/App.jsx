@@ -1,6 +1,6 @@
 import "./App.css";
 import { Routes, Route, useLocation, BrowserRouter } from "react-router-dom";
-import Navbarmain from "./Components/navbarmain/Navbarmain";
+// import Navbarmain from "./Components/navbarmain/Navbarmain";
 import Homepages from "./page/home/Homepages";
 import Aboutpages from "./page/aboutpages/Aboutpages";
 // import Bridepages from "./Components/pages/bridepages/bridepages";
@@ -16,14 +16,14 @@ import Scrolltotop from "./Components/scrolltotop/Scrolltotop";
 import Newspages from "./page/newspages/Newspages";
 import Step from "./Components/logins/register/step/Step";
 import Navbar from "./Components/navbar/Navbar";
-import Newpage from "./Components/newscard/newlist/Newlist";
+// import Newpage from "./Components/newscard/newlist/Newlist";
 import Newcardpage from "./Components/newscard/nescardpage/Nescardpage";
 import Eventspages from "./page/eventspages/Eventspages";
-import Eventscard from "./Components/events/eventcard/Eventscard";
-import Eventdetail from './Components/events/eventsdetail/Eventsdetail';
-import GroomProfile from './Components/groom/groomprofile/Groomprofile';
+import EventCard from "./Components/events/eventCard/EventCard";
+import Eventdetail from "./Components/events/eventsdetail/Eventsdetail";
+import GroomProfile from "./Components/groom/groomprofile/Groomprofile";
 import Vendorpages from "./page/vendorpages/Vendorpages";
-import { FaBridge } from "react-icons/fa6";
+// import { FaBridge } from "react-icons/fa6";
 import Bridepages from "./page/bridepages/Bridepages";
 import VendorDetail from "./Components/venders/Vendordetail/Vendordetail";
 import MemberPage from "./page/memberpages/Memberpages";
@@ -43,7 +43,8 @@ function AppContent() {
         <Route path="/" element={<Homepages />} />
         <Route path="/about" element={<Aboutpages />} />
         <Route path="/bride" element={<Bridepages />} />
-        <Route path="/groom" element={< Groompages/>} />
+        <Route path="/groom" element={<Groompages />} />
+        <Route path="/profile/:id" element={<ProfileComponent />} />
         <Route path="/profile/:index" element={<ProfileComponent />} />
         <Route path="/profilegroom/:index" element={<Groombiodata />} />
         <Route path="/contact" element={<Contactpages />} />
@@ -54,16 +55,18 @@ function AppContent() {
         <Route path="/news" element={<Newspages />} />
         <Route path="/register" element={<Step />} />
         <Route path="/events" element={<Eventspages />} />
-        <Route path="/event-detail/:id" element={<Eventdetail />} />
-        <Route path="/events" element={<Eventscard />} />
+        <Route path="/events/:id" element={<Eventdetail />} />
+        <Route path="/events" element={<EventCard />} />
         <Route path="/card-list" element={<Newspages />} />
         <Route path="/card-detail/:id" element={<Newcardpage />} />
         <Route path="/profilegroom/:id" element={<Groombiodata />} />
         <Route path="/groomprofile" element={<GroomProfile />} />
-        <Route path="/vendor" element={<Vendorpages/>}/>
+        {/* <Route path="/vendor" element={<Vendorpages />} /> */}
+        <Route path="/vendors" element={<Vendorpages />} />
+        <Route path="/vendor-detail/:id" element={<VendorDetail />} />
         {/* <Route path="/vendor-detail/:id" element={<VendorDetail/>}/> */}
-        <Route path="/vendor-detail/:id" element={<VendorDetail/>} />
-        <Route path="/member" element={<MemberPage/>}/>
+        {/* <Route path="/vendor-detail/:id" element={<VendorDetail />} /> */}
+        <Route path="/member" element={<MemberPage />} />
         <Route path="/members/:id" element={<MemberDetail />} />
       </Routes>
       <Footer />

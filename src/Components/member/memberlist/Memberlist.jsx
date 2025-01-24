@@ -1,23 +1,40 @@
-import React, { useState } from 'react';
-import MemberCard from '../membercard/Membercard';
-import MemberDetail from '../memberdetail/Memberdetail';
-import members from '../memberdata/Memberdata';
+import React, { useEffect, useState } from "react";
+import MemberCard from "../membercard/Membercard";
+import styles from "./MemberList.module.css";
 
 const MemberList = () => {
-  const [selectedMember, setSelectedMember] = useState(null);
+  const [members, setMembers] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    const fetchMembers = async () => {
+      try {
+        const response = await fetch("http://localhost:8000/api/v1/sanchalaks"); // Backend API
+        const data = await response.json();
+        if (data.success) {
+          setMembers(data.data);
+        } else {
+          setError(data.message || "Failed to fetch members.");
+        }
+      } catch (err) {
+        setError("Error fetching members: " + err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchMembers();
+  }, []);
+
+  if (loading) return <p>Loading members...</p>;
+  if (error) return <p>{error}</p>;
 
   return (
-    <div>
-      <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
-        {members.map((member) => (
-          <MemberCard
-            key={member.id}
-            member={member}
-            onClick={setSelectedMember}
-          />
-        ))}
-      </div>
-      <MemberDetail member={selectedMember} onClose={() => setSelectedMember(null)} />
+    <div className={styles.container}>
+      {members.map((member) => (
+        <MemberCard key={member._id} member={member} />
+      ))}
     </div>
   );
 };

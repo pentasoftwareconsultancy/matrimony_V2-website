@@ -1,58 +1,58 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import eventsData from "../eventsdata/Eventdata";  // Ensure the path is correct
 import styles from "./Eventsdetail.module.css";
 
 const Eventsdetail = () => {
-  const { id } = useParams();
-  const event = eventsData.find((item) => item.id === parseInt(id, 10));
+  const { id } = useParams(); // Get event ID from URL
+  const [event, setEvent] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
 
-  if (!event) {
-    return <div>Event not found!</div>;
-  }
+  useEffect(() => {
+    const fetchEvent = async () => {
+      try {
+        const response = await fetch(`http://localhost:8000/api/v1/events/${id}`);
+        const data = await response.json();
+        if (data.success) {
+          setEvent(data.data); // Populate event details
+        } else {
+          setError(data.message || "Failed to fetch event details.");
+        }
+      } catch (err) {
+        setError("Error fetching event: " + err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchEvent();
+  }, [id]);
+
+  if (loading) return <p>Loading event details...</p>;
+  if (error) return <p>{error}</p>;
 
   return (
     <div className={styles.cardDetail}>
-      <h1>{event.title}</h1>
+      <h1>{event.name}</h1>
       <div className={styles.eventContent}>
-        
-        <img src={event.image} alt={event.title} className={styles.image} />
+        <img
+          src={event.imageUrl || "https://via.placeholder.com/300"}
+          alt={event.name}
+          className={styles.image}
+        />
         <div className={styles.textContent}>
-          
-          <p className={styles.description}>{event.description}</p>  {/* Event description */}
-          <p className={styles.content}>{event.content || "No additional details available."}</p> {/* Event content */}
-          <p className={styles.eventDetails}><strong>Event Type:</strong> {event.eventType}</p> {/* Event type */}
-          <p className={styles.eventDetails}><strong>Agenda:</strong> {event.agenda}</p> {/* Event agenda */}
-          
-          {/* Event Date and Time */}
-          <p className={styles.eventDetails}><strong>Date:</strong> {event.date}</p>
-          <p className={styles.eventDetails}><strong>Time:</strong> {event.time}</p>
-          <p className={styles.eventDetails}><strong>Place:</strong> {event.place}</p>
+          <p className={styles.description}>{event.description}</p>
+          <p className={styles.eventDetails}>
+            <strong>Date:</strong> {new Date(event.date).toLocaleDateString()}
+          </p>
+          <p className={styles.eventDetails}>
+            <strong>Location:</strong> {event.location}
+          </p>
+          <p className={styles.eventDetails}>
+            <strong>Organizer:</strong> {event.organizer || "N/A"}
+          </p>
         </div>
       </div>
-
-      {/* Display participants' data */}
-      <h3 className={styles.participantTitle}>Participants:</h3>
-      {event.participants && event.participants.length > 0 ? (
-  <div className={styles.participantsGrid}>
-    {event.participants.map((participant, index) => (
-      <div key={index} className={styles.participant}>
-        <h4>{participant.fullName}</h4>
-        <p><strong>Age:</strong> {participant.age}</p>
-        <p><strong>Gender:</strong> {participant.gender}</p>
-        <p><strong>Occupation:</strong> {participant.occupation}</p>
-        <p><strong>Company:</strong> {participant.company}</p>
-        <p><strong>Location:</strong> {participant.location}</p>
-        <p><strong>Interests:</strong> {participant.interests}</p>
-        <p><strong>Role:</strong> {participant.role}</p>
-        <p><strong>Attendance Confirmed:</strong> {participant.attendanceConfirmed ? "Yes" : "No"}</p>
-        <p><strong>Feedback:</strong> {participant.feedback}</p>
-      </div>
-    ))}
-  </div>
-) : (
-  <p>No participants listed for this event.</p>
-)}
     </div>
   );
 };

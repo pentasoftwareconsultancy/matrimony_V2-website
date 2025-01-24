@@ -9,7 +9,7 @@
     padding: 20px;
     background-color: #f4f4f9;
     font-family: Arial, sans-serif;
-    background-image: url(../../bride/images/frower1.webp);
+    /* background-image: url(../../bride/images/frower1.webp); */
     width: 90%; /* Replace with your image path */
     background-size: cover; /* Ensures the image covers the container */
     background-position: center; /* Centers the image */

@@ -107,7 +107,7 @@ const Navbar = ({ isHomePage }) => {
              <Link to="/events" className={isHomePage ? styles.whiteText : styles.blackText}>
                Events
              </Link>
-             <Link to="/vendor" className={isHomePage ? styles.whiteText : styles.blackText}>
+             <Link to="/vendors" className={isHomePage ? styles.whiteText : styles.blackText}>
                Vendors
              </Link>
              <Link to="/news" className={isHomePage ? styles.whiteText : styles.blackText}>

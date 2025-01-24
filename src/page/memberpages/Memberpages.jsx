@@ -1,5 +1,3 @@
-import React from 'react';
-// import Memberlist from '../../Components/member/memberlist';
 import styles from './Memberpage.module.css';
 import MemberList from '../../Components/member/memberlist/Memberlist';
 
