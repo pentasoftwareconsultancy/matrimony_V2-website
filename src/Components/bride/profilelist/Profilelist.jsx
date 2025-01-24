@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import ProfileCard from "../profilecard/Profilecard"; // Import ProfileCard component
 import styles from "./Profilelist.module.css"; // Optional CSS for layout
 
