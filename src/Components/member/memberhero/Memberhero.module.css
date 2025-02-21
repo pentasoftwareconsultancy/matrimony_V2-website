@@ -1,0 +1,49 @@
+.heroSection {
+    position: relative;
+    height: 100vh;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay for text readability */
+    padding: 20px;
+    /* margin-top: 10px; */
+    height: 43vh;
+    padding: 200px;
+    /* margin-left: 5px; */
+    width: 90%;
+    border-radius: 40px;
+    color: rgb(255, 252, 252);
+  }
+  
+  .title {
+    font-size: 3rem;
+margin-top: 20px;
+   color: white;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .subtitle {
+    margin-top: 10px;
+    color: white;
+    font-size: 1.5rem;
+    font-style: italic;
+  }
+  
+  /* Style for the image to cover the whole background */
+  .backgroundImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 40px;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Ensure image stays behind the text */
+  }
+  

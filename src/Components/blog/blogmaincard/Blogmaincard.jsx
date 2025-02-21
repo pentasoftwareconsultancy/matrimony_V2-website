@@ -1,42 +1,69 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-// import blogs from "../blogmaindata/Blogmaindata";
-// import blog from "../blogdata/Blogdata"
-// import blogs from "../blogdata/Blogdata";
-import blogs from "../blogdata/Blogdata";
-import styles from "./Blogmaincard.module.css";
+import styles from "./BlogMainCard.module.css";
 
-const Blogmaincard = () => {
-  const { id } = useParams();
-  const blog = blogs.find((blog) => blog.id === parseInt(id, 10));
+const BlogMainCard = () => {
+  const { id } = useParams(); // Fetch the blog ID from the URL
+  const [blog, setBlog] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  // if (!blog) {
-  //   return <p>Blog post not found!</p>;
-  // }
+  useEffect(() => {
+    const fetchBlog = async () => {
+      try {
+        setError(null); // Reset error state
+        const response = await fetch(`http://localhost:8000/api/v1/blogs/${id}`); // API endpoint for single blog
+        if (!response.ok) throw new Error("Failed to fetch blog details");
+
+        const result = await response.json();
+
+        // Ensure the response structure is valid
+        if (result.success && result.data) {
+          setBlog(result.data); // Use the `data` key from the response
+        } else {
+          throw new Error("Unexpected response format from backend");
+        }
+      } catch (err) {
+        console.error("Error fetching blog:", err);
+        setError(err.message); // Set error message
+      } finally {
+        setLoading(false); // Stop loading spinner
+      }
+    };
+
+    fetchBlog();
+  }, [id]);
+
+  // Handle loading and error states
+  if (loading) return <p>Loading blog...</p>;
+  if (error) return <p>Error: {error}</p>;
 
   return (
-    <div className={styles.cards}>
-       <img src={blog.image} alt={blog.title} className={styles.img} />
-    <div className={styles.main}>
-    <div className={styles.container}>
-      <h1 className={styles.header}>{blog.title}</h1>
-      <h1 className={styles.description}>{blog.description}</h1>
-      <p className={styles.author}>By: {blog.author}</p>
-      <img src={blog.image} alt={blog.title} className={styles.image} />
-      <div className={styles.content}>
-        <p>{blog.content}</p>
+    <div className={styles.card}>
+      <img src={blog.blogimageUrl || "https://via.placeholder.com/300"} alt={blog.title} className={styles.img} />
+      <div className={styles.container}>
+        <h1 className={styles.header}>{blog.title}</h1>
+        <p className={styles.author}>
+          <strong>Author:</strong> {blog.createdBy?.name || blog.author || "Unknown Author"}
+        </p>
+        <p className={styles.category}>
+          <strong>Category:</strong> {blog.category || "Uncategorized"}
+        </p>
+        <p className={styles.published}>
+          <strong>Published:</strong> {blog.isPublished ? "Yes" : "No"}
+        </p>
+        <div className={styles.content}>
+          <p>{blog.content}</p>
+        </div>
+        <p className={styles.timestamp}>
+          <strong>Created At:</strong> {new Date(blog.createdAt).toLocaleDateString()}
+        </p>
+        <p className={styles.timestamp}>
+          <strong>Updated At:</strong> {new Date(blog.updatedAt).toLocaleDateString()}
+        </p>
       </div>
-    </div>
-    <div className={styles.containermain}>
-      <div className={styles.blog}>LATEST BLOGS</div>
-      <div className={styles.text}>{blog.text}</div>
-      <hr/>
-      <div className={styles.text}>{blog.blogtext}</div>
-<button className={styles.button}>Read All Blogs</button>
-    </div>
-    </div>
     </div>
   );
 };
 
-export default Blogmaincard;
+export default BlogMainCard;

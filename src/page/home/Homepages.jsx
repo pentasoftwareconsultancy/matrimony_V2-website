@@ -12,7 +12,7 @@ function Homepages() {
   return (
     <div>
      <Hero/>
-   <Filter/>
+   {/* <Filter/> */}
       <Featurees/>
       <Homeabout/>
       <Profilesteps/>

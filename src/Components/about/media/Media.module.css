@@ -85,7 +85,7 @@
     }
 
     .textSection {
-        width: 100%;
+        width: 90%;
         padding: 1rem;
     }
 
@@ -111,10 +111,12 @@
 /* Mobile View (max-width: 480px) */
 @media (max-width: 480px) {
     .textSection {
-        width: 100%;
+        width: 90%;
         padding: 1rem;
     }
-
+.imag1{
+  border-radius: 15px 0 30px 0;
+}
     .section {
         font-size: 28px;
     }

@@ -1,18 +1,17 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import styles from './MemberCard.module.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import styles from "./MemberCard.module.css";
 
 const MemberCard = ({ member }) => {
   return (
-    <Link to={`/members/${member.id}`} className={styles.card}>
-        <div className={styles.cardmain}>
-      <img src={member.image} alt={member.name} className={styles.image} />
+    <Link to={`/members/${member._id}`} className={styles.card}>
+      <div className={styles.main}>
+      <img src={member.profilePic} alt={member.name} className={styles.image} />
       </div>
-      <div className={styles.maintext}>
+<div className={styles.maintext}>
       <h3 className={styles.name}>{member.name}</h3>
-      <p className={styles.title}>{member.title}</p>
-      <p className={styles.email}>{member.mobile}</p>
-      <p className={styles.email}>{member.email}</p>
+      <p className={styles.title}>{member.designation}</p>
+      <p className={styles.title}>{member.phone}</p>
       </div>
     </Link>
   );

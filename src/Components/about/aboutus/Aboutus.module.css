@@ -1,11 +1,14 @@
 /* Aboutus.module.css */
 
 .container {
-  padding: 40px;
-  background-color: #f9f9f9;
-  font-family: Arial, sans-serif;
+  padding: 50px 20px;
+  background: linear-gradient(to bottom, #ffffff, #f4f7fc);
+  font-family: "Roboto", Arial, sans-serif;
   max-width: 1200px;
-  margin: 0 auto;
+  margin-top: 300px;
+  margin: 100px auto ;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .textSection {
@@ -14,46 +17,64 @@
 }
 
 .textSection h2 {
-  font-size: 36px;
+  font-size: 42px;
   font-weight: bold;
   color: #2a2a2a;
   margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .textSection p {
-  font-size: 16px;
+  font-size: 18px;
   color: #555;
   line-height: 1.8;
   margin-bottom: 20px;
+  padding: 0 10px;
 }
 
 .valuesSection {
   margin: 40px 0;
-}
-
-.valuesSection h3 {
-  font-size: 28px;
-  font-weight: bold;
-  color: #2a2a2a;
-  margin-bottom: 20px;
   text-align: center;
 }
 
+.valuesSection h3 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #d32f2f;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
 .valuesList {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+  margin-left: 100px;
+  margin-right: 100px;
+  /* list-style: none; */
+  /* padding: 0;
+  margin: 0; */
 }
-
+.main{
+  text-align: justify;
+  margin-left: 50px;
+  margin-right: 50px;
+}
 .valuesList li {
-  font-size: 16px;
-  color: #555;
-  margin-bottom: 15px;
-  line-height: 1.8;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 17px;
 }
 
-.valuesList li strong {
-  color: #333;
+.valuesList strong {
+  flex: 0 0 250px; /* Adjust the width as needed */
+  text-align: left;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.valuesList span {
+  flex: 1;
+  font-size: 17px;
+  text-align: left;
 }
 
 .statsSection {
@@ -66,18 +87,23 @@
 
 .stat {
   flex: 1 1 calc(33.33% - 20px);
-  background-color: #fff;
+  background: #fff;
   text-align: center;
-  padding: 20px;
+  padding: 30px 20px;
   border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .statNumber {
-  font-size: 32px;
+  font-size: 48px;
   font-weight: bold;
   color: #d32f2f;
-  display: block;
   margin-bottom: 10px;
 }
 
@@ -86,35 +112,45 @@
   color: #555;
 }
 
+/* Responsive Design */
 @media (max-width: 1000px) {
   .textSection h2 {
-    font-size: 30px;
+    font-size: 36px;
   }
 
   .textSection p {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .valuesSection h3 {
-    font-size: 24px;
+    font-size: 28px;
+  }
+
+  .valuesList strong {
+    flex: 0 0 150px;
   }
 
   .valuesList li {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .statsSection {
-    gap: 10px;
+    gap: 15px;
   }
 
   .stat {
-    flex: 1 1 calc(50% - 10px);
+    flex: 1 1 calc(50% - 15px);
   }
 }
 
 @media (max-width: 600px) {
+  .container {
+    margin-top: 300px;
+    padding: 20px;
+  }
+
   .textSection h2 {
-    font-size: 24px;
+    font-size: 28px;
   }
 
   .textSection p {
@@ -122,10 +158,22 @@
   }
 
   .valuesSection h3 {
-    font-size: 20px;
+    font-size: 24px;
   }
 
-  .valuesList li {
+  .valuesList {
+    width: 90%;
+  }
+  .valuesList{
+    margin-left: 35px;
+    /* margin-right: 10px; */
+  }
+
+  .valuesList strong {
+    flex: 0 0 100px;
+  }
+
+  .valuesList span {
     font-size: 14px;
   }
 
@@ -136,5 +184,89 @@
 
   .stat {
     flex: 1 1 100%;
+  }
+}
+
+
+/* Mobile View (max-width: 768px) */
+@media (max-width: 768px) {
+  .container {
+    margin: 550px auto;
+    padding: 15px;
+  }
+
+  .textSection h2 {
+    font-size: 28px;
+    letter-spacing: 0.3px;
+  }
+
+  .textSection p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .valuesSection h3 {
+    font-size: 24px;
+  }
+
+  .valuesList strong {
+    flex: 0 0 100px;
+    font-size: 14px;
+  }
+
+  .valuesList span {
+    font-size: 13px;
+  }
+
+  .statsSection {
+    flex-direction: column;
+  }
+
+  .stat {
+    flex: 1 1 100%;
+    margin-bottom: 15px;
+  }
+
+  .statNumber {
+    font-size: 28px;
+  }
+
+  .statLabel {
+    font-size: 12px;
+  }
+}
+
+/* Small Mobile View (max-width: 480px) */
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+
+  .textSection h2 {
+    font-size: 24px;
+  }
+
+  .textSection p {
+    font-size: 12px;
+  }
+
+  .valuesSection h3 {
+    font-size: 20px;
+  }
+
+  .valuesList strong {
+    font-size: 12px;
+  }
+
+  .valuesList span {
+    font-size: 12px;
+  }
+
+  .statNumber {
+    font-size: 24px;
+  }
+
+  .statLabel {
+    font-size: 10px;
   }
 }

@@ -1,11 +1,7 @@
-import React, { useState } from "react";
-import { locations, categories } from "../eventherodata/Eventherodata"; // Import data
+import React from "react";
 import styles from "./Eventfilter.module.css";
 
-const Eventfilter = () => {
-  const [selectedLocation, setSelectedLocation] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("");
-
+const Eventfilter = ({ selectedLocation, setSelectedLocation, selectedCategory, setSelectedCategory, handleSearch, locations, categories }) => {
   return (
     <div className={styles.container}>
       <h2 className={styles.title}>Search Event</h2>
@@ -14,6 +10,7 @@ const Eventfilter = () => {
           type="text"
           placeholder="Find your next event"
           className={styles.input}
+          onChange={(e) => handleSearch(e.target.value)} // Handle text search
         />
         <select
           className={styles.dropdown}
@@ -21,7 +18,7 @@ const Eventfilter = () => {
           onChange={(e) => setSelectedLocation(e.target.value)}
         >
           <option value="">Event Location</option>
-          {locations.map((location, index) => (
+          {locations && locations.map((location, index) => (
             <option key={index} value={location}>
               {location}
             </option>
@@ -33,7 +30,7 @@ const Eventfilter = () => {
           onChange={(e) => setSelectedCategory(e.target.value)}
         >
           <option value="">Event Category</option>
-          {categories.map((category, index) => (
+          {categories && categories.map((category, index) => (
             <option key={index} value={category}>
               {category}
             </option>
@@ -41,7 +38,7 @@ const Eventfilter = () => {
         </select>
         <button className={styles.button}>Search Now</button>
       </div>
-      <p className={styles.footer}>Discover 24 Upcoming Events</p>
+      <p className={styles.footer}>Discover {locations.length} Upcoming Events</p>
     </div>
   );
 };

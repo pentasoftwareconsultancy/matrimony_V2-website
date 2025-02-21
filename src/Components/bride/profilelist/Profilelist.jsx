@@ -1,17 +1,17 @@
-import React from "react";
-import styles from "./ProfileList.module.css";
-import { Link } from "react-router-dom";
-import ProfileCard from "../profilecard/Profilecard";
-import profilesData from "../bridedata/Bridedata"; // Importing profilesData from data file
+import React from 'react';
+import ProfileCard from '../profilecard/Profilecard';
+import styles from './Profilelist.module.css';
 
-const ProfileList = () => {
+const ProfileList = ({ profiles }) => {
   return (
-    <div className={styles.list}>
-      {profilesData.map((profile, index) => (
-        <Link to={`/profile/${index}`} key={index}>
-          <ProfileCard profile={profile} />
-        </Link>
-      ))}
+    <div className={styles.profileList}>
+      {profiles.length > 0 ? (
+        profiles.map(profile => (
+          <ProfileCard key={profile._id} profile={profile} />
+        ))
+      ) : (
+        <p>No profiles found</p>
+      )}
     </div>
   );
 };

@@ -25,7 +25,7 @@ const Dropdown = ({ label, options }) => {
         <ul className={styles.menu}>
           {options.map((option, index) => (
             <li key={index} className={styles.option}>
-              <label>
+              <label className={styles.main}>
                 <input className={styles.checkbox}
                   type="checkbox"
                   checked={selectedOption === option} 

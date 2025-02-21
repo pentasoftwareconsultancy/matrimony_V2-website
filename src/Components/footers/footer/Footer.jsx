@@ -8,22 +8,26 @@ import { FaFacebook } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { LiaFacebook } from "react-icons/lia";
 import { FaXTwitter } from "react-icons/fa6";
+import logo from "./abks logo.png";
+
 const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.section}>
-          <h2 className={styles.logo}>LOGO</h2>
+          
+            <img src={logo} alt="Logo" className={styles.logoImage} />
+{/*           
           <p>
-          Find your perfect match with us – where love meets destiny. Explore a world of 
-          trusted connections and meaningful relationships. Your journey to forever begins here, with us by
-           your side every step of the way.
-          </p>
-        
+            Find your perfect match with us – where love meets destiny. Explore
+            a world of trusted connections and meaningful relationships. Your
+            journey to forever begins here, with us by your side every step of
+            the way.
+          </p> */}
         </div>
 
         <div className={styles.section}>
-          <h3>Navigation</h3>
+          <h3 className={styles.links}>Navigation</h3>
           <ul>
             <li>Home</li>
             <li>About</li>
@@ -33,7 +37,7 @@ const Footer = () => {
         </div>
 
         <div className={styles.section}>
-          <h3>Quick Links</h3>
+          <h3 className={styles.links}>Quick Links</h3>
           <ul>
             <li>Contact Us</li>
             <li>FAQs</li>
@@ -43,7 +47,7 @@ const Footer = () => {
         </div>
 
         <div className={styles.section}>
-          <h3>Services</h3>
+          <h3 className={styles.links}>Services</h3>
           <ul>
             <li>News</li>
             <li>Contact</li>
@@ -52,15 +56,28 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className={styles.bottom}>
-        <p className={styles.text}> < FaLocationDot/>: 2022 Grance Template - All Rights Reserved</p>
-        <p className={styles.phone}><FaPhoneAlt />: 5768797999</p>
-        <p className={styles.email}><MdEmail />: nexuxctc2020@gmail.com</p>
+      <div className={styles.bottommain}>
+        <p className={styles.text}>
+          {" "}
+          <FaLocationDot />: 2022 Grance Template - All Rights Reserved
+        </p>
+        <p className={styles.phone}>
+          <FaPhoneAlt />: 5768797999
+        </p>
+        <p className={styles.email}>
+          <MdEmail />: nexuxctc2020@gmail.com
+        </p>
         <div className={styles.icons}>
-  <span className={styles.iconinsta}><FaInstagram /></span>
-  <span className={styles.iconFaFacebook}><LiaFacebook /></span>
-  <span className={styles.icontwitter}><FaXTwitter /></span>
-</div>
+          <span className={styles.iconinsta}>
+            <FaInstagram />
+          </span>
+          <span className={styles.iconFaFacebook}>
+            <LiaFacebook />
+          </span>
+          <span className={styles.icontwitter}>
+            <FaXTwitter />
+          </span>
+        </div>
       </div>
     </footer>
   );

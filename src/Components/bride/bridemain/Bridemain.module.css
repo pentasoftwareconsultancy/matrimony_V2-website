@@ -1,16 +1,24 @@
 .Bridemain{
     display: flex;
     margin-top: 70px;
-    margin-left: 70px;
+    margin-left: 150px;
     margin-right: 100px;
 }
-.main{
-    width: 35%;
-}
-.containmain{
-    width: 80%;
+.sidebar {
+  width: 30%;
+  position: sticky;
+  top: 0; /* Makes the sidebar stick to the top of the viewport when scrolling */
+  height: 100vh; /* Ensure the sidebar occupies full height of the screen */
+  overflow-y: auto; /* Adds scrolling if the content is taller than the viewport */
+  padding: 1em; /* Optional padding for better spacing */
 }
 
+.mainContent{
+    width: 80%;
+}
+.searchInput{
+  margin-left: 20px;
+}
 
 
 /* Responsive styles */

@@ -1,36 +1,43 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import styles from "./Groomprofile.module.css";
 
-const Groomprofile = ({ profile }) => { 
-  // Check if the profile object exists and has the necessary data
-  if (!profile) {
-    return <div>Loading...</div>; // Or show a placeholder
-  }
+const Groomprofile = ({ userProfile = {} }) => { // Default `userProfile` to an empty object
+  const navigate = useNavigate(); // Hook for navigation
+
+  // Function to handle click on the card and navigate to the detailed profile
+  const handleCardClick = () => {
+    if (userProfile._id) {
+      navigate(`/profile/${userProfile._id}`); // Navigate to the detailed profile page with the profile ID
+    }
+  };
 
   return (
-    <div className={styles.card}>
+    <div className={styles.card} onClick={handleCardClick}>
       <div className={styles.content}>
+        {/* Profile Image */}
         <div className={styles.image}>
           <img
-            src={data.image || "https://via.placeholder.com/100"}
-            alt={datae.name || "Avatar"}
+            src={userProfile.profilePhoto || "https://via.placeholder.com/100"} // Fallback to placeholder
+            alt={userProfile.fullName || "Avatar"} // Fallback to "Avatar"
             className={styles.avatar}
           />
         </div>
-        <div className={styles.info}>
-          <div className={styles.header}>
-            <h2>{data.name}</h2>
+
+        {/* Profile Information */}
+        <div className={styles.main}>
+          <h2 className={styles.fullName}>{userProfile.fullName || "Unknown"}</h2>
+          <div className={styles.info}>
+            <p><strong>Age:</strong> {userProfile.age || "N/A"}</p>
+            <p><strong>Mobile Number:</strong> {userProfile.mobileNumber || "N/A"}</p>
+            <p><strong>Mother Tongue:</strong> {userProfile.motherTongue || "N/A"}</p>
+            {/* Uncomment if Date of Birth is required */}
+            {/* <p><strong>Date of Birth:</strong> {userProfile.dateOfBirth || "N/A"}</p> */}
+            <p><strong>Location:</strong> {userProfile.city || "N/A"}</p>
+            <p><strong>Education Level:</strong> {userProfile.educationLevel || "N/A"}</p>
+            <p><strong>Annual Income:</strong> {userProfile.annualIncome || "N/A"}</p>
+            <button className={styles.connect}>Connect Now</button>
           </div>
-          <div className={styles.main}>
-            <p><strong>Caste:</strong> {data.caste || "N/A"}</p>
-            <p><strong>Age / Height:</strong> {data.age || "N/A"} / {data.height || "N/A"}</p>
-            <p><strong>Education:</strong> {data.education || "N/A"}</p>
-            <p><strong>Occupation:</strong> {data.occupation || "N/A"}</p>
-            <p><strong>Annual Income:</strong> {data.income || "N/A"}</p>
-            <p><strong>Work Location:</strong> {data.workLocation || "N/A"}</p>
-            <p><strong>Native Place:</strong> {data.nativePlace || "N/A"}</p>
-          </div>
-          <button className={styles.connect}>Connect Now</button>
         </div>
       </div>
     </div>

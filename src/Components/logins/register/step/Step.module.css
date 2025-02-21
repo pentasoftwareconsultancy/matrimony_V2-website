@@ -1,13 +1,16 @@
 .stepContainer {
     width: 80%;
     margin-top: 100px;
+    margin: 150px;
     /* margin:  auto; */
   }
   
   .stepBar {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+
+    margin-left: 50px;
   }
   
   .step {
@@ -19,12 +22,13 @@
   }
   
   .step.active {
-    background-color: #ff0000;
+    background-color: #ff5069;
     color: #fff;
   }
   
   .stepContent {
     min-height: 200px;
+    margin-left: 50px;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -37,11 +41,25 @@
     margin-top: 20px;
   }
   
-  button {
+  .previous {
     padding: 10px 20px;
+    margin-left: 50px;
+    background-color: #ff5069;
+
+    width: 8%;
     border: none;
-    border-radius: 5px;
+    border-radius: 15px 0 15px 15px;
     cursor: pointer;
+  }
+  .submit{
+    width: 8%;
+    border-radius: 15px 0 15px 15px;
+    background-color: #ff5069;
+  }
+  .next{
+    width: 8%;
+    border-radius: 15px 0 15px 15px;
+    background-color: #ff5069;
   }
   
   button:disabled {

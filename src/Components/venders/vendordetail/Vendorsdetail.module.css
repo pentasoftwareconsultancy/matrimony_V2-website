@@ -1,6 +1,6 @@
 .cardDetail {
     max-width: 80%;
-    margin: 40px auto;
+    margin: 80px auto;
     padding: 20px;
     background-color: #ffffff;
     border: 1px solid #ddd;
@@ -93,5 +93,74 @@
   
   strong {
     color: #000;
+  }
+  /* .cardDetail {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .eventContent {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+  } */
+  
+  .image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .textContent {
+    flex: 1;
+  }
+  
+  .description {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  .gallery {
+    margin-top: 30px;
+  }
+  
+  .galleryGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+  }
+  
+  .galleryItem img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .galleryInfo {
+    text-align: center;
+    margin-top: 5px;
+  }
+  
+  .reviews {
+    margin-top: 30px;
+  }
+  
+  .review {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .reviewDate {
+    font-size: 0.85rem;
+    color: #777;
   }
   

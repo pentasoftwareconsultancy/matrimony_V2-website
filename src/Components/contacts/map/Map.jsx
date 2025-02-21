@@ -34,12 +34,3 @@ const Map = () => {
 };
 
 export default Map;
-// import React from 'react'
-
-// function Map() {
-//   return (
-//     <div>map</div>
-//   )
-// }
-
-// export default Map;

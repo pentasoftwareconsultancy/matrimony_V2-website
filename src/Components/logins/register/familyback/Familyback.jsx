@@ -34,7 +34,9 @@ const Familyback = ({ formData, setFormData, setIsFormValid }) => {
       <form>
         {/* Section 1: Personal Details */}
         <div className={styles.section}>
-          <h3>Personal Details</h3>
+        <h3 className={styles.detail}>Personal Details</h3>
+        <div className={styles.personal}>
+         
           <div className={styles.formGroup}>
             <label htmlFor="maritalStatus">Marital Status*</label>
             <select
@@ -180,10 +182,13 @@ const Familyback = ({ formData, setFormData, setIsFormValid }) => {
             </select>
           </div>
         </div>
+        </div>
 
         {/* Section 2: Education and Career Details */}
         <div className={styles.section}>
-          <h3>Education and Career Details</h3>
+          <h3 className={styles.detail}>Education and Career Details</h3>
+          <div className={styles.mainsection}>
+
           <div className={styles.formGroup}>
             <label htmlFor="educationLevel">Education Level*</label>
             <select
@@ -281,6 +286,7 @@ const Familyback = ({ formData, setFormData, setIsFormValid }) => {
               <option>Below $50k</option>
               <option>$50k-$100k</option>
             </select>
+          </div>
           </div>
         </div>
       </form>

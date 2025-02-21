@@ -14,10 +14,12 @@
 .form {
   background-color: #fff;
   border-radius: 8px;
+ 
+  height: 80vh;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 30px;
-  width: 100%;
-  max-width: 800px;
+  width: 90%;
+  /* max-width: 800px; */
 }
 
 /* Title of the form */
@@ -26,14 +28,17 @@
   font-weight: bold;
   color: #333;
   margin-bottom: 10px;
+  padding-top: 50px;
   text-align: center;
 }
 
 /* Subtitle under the title */
 .subtitle {
+
   font-size: 1.1rem;
   color: #555;
   margin-bottom: 20px;
+  padding-bottom: 30px;
   text-align: center;
 }
 

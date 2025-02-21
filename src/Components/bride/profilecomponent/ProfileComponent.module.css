@@ -1,0 +1,221 @@
+/* ProfileComponent.module.css */
+
+/* General Layout */
+.profileContainer {
+  align-items: center;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 90%;
+  margin: 10px auto;
+  background-image: url(../images/background1.jpg);
+  background-color: #fafafa;
+  background-repeat: no-repeat;
+  background-size: cover; /* Ensures the background image covers the container */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.main{
+  display: flex;
+  gap: 40px;
+  grid-template-columns: 1fr 1fr;
+  /* flex-direction: column; */
+}
+.manicard{
+  width: 60%;
+ 
+}
+.maintext{
+  margin-top: px;
+  width: 100%;
+}
+.header {
+  display: flex;
+  gap: 120px;
+  text-align: end;
+  margin-top: 20px;
+  margin-bottom: -40px;
+}
+.text{
+margin-left: 750px;
+font-size: 40px;
+}
+.header h1 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* .main {
+  width: 100%;
+  
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 40px;
+} */
+
+/* Image Section */
+.imageSection {
+  position: sticky;
+  top: 0;  /* The distance from the top of the viewport */
+  z-index: 1000; 
+  /* margin-top: 10px; */
+  display: flex;
+  justify-content: center;
+}
+
+.profileImage {
+  margin-top: 50px;
+  width: 100%;
+  height: 80vh;
+ 
+  top: 100px;
+  border-radius: 10%;
+  object-fit: cover;
+  border: 5px solid #ddd;
+  transition: transform 0.3s ease;
+}
+
+.profileImage:hover {
+  transform: scale(1.05);
+}
+
+/* Profile Section */
+.detailsSection,
+.educationSection,
+.familySection,
+.patrikaSection,
+.partnerSection {
+  background-color: #ffffff;
+  padding: 30px;
+  margin-top: 50px;
+  margin-right: 100px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.detailsSection h2,
+.educationSection h2,
+.familySection h2,
+.patrikaSection h2,
+.partnerSection h2 {
+  font-size: 26px;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.detailsSection p,
+.educationSection p,
+.familySection p,
+.patrikaSection p,
+.partnerSection p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.detailsSection p strong,
+.educationSection p strong,
+.familySection p strong,
+.patrikaSection p strong,
+.partnerSection p strong {
+  color: #333;
+  font-weight: bold;
+}
+
+/* Hover Effect for Sections */
+.detailsSection:hover,
+.educationSection:hover,
+.familySection:hover,
+.patrikaSection:hover,
+.partnerSection:hover {
+  background-color: #f9f9f9;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* Partner Section Styles */
+.partnerSection p {
+  margin-left: 20px;
+}
+
+/* Section Spacing */
+.detailsSection p:last-child,
+.educationSection p:last-child,
+.familySection p:last-child,
+.patrikaSection p:last-child,
+.partnerSection p:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profileContainer {
+    padding: 15px;
+  }
+
+  .main {
+    gap: 20px;
+  }
+
+  .profileImage {
+    width: 150px;
+    height: 150px;
+  }
+
+  .header h1 {
+    font-size: 28px;
+  }
+
+  .detailsSection,
+  .educationSection,
+  .familySection,
+  .patrikaSection,
+  .partnerSection {
+    padding: 20px;
+  }
+
+  .detailsSection h2,
+  .educationSection h2,
+  .familySection h2,
+  .patrikaSection h2,
+  .partnerSection h2 {
+    font-size: 22px;
+  }
+
+  .detailsSection p,
+  .educationSection p,
+  .familySection p,
+  .patrikaSection p,
+  .partnerSection p {
+    font-size: 14px;
+  }
+
+  .profileImage:hover {
+    transform: scale(1);
+  }
+}
+
+/* Adding a slight animation to elements */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.detailsSection,
+.educationSection,
+.familySection,
+.patrikaSection,
+.partnerSection {
+  animation: fadeIn 0.5s ease-in-out;
+}

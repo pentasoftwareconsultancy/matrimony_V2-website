@@ -1,47 +1,97 @@
-import React from "react";
-import styles from "./ProfileCard.module.css";
+// import React from "react";
+// import { useNavigate } from "react-router-dom"; // Import useNavigate
+// import styles from "./ProfileCard.module.css";
 
-const ProfileCard = ({ profile }) => {
+// const ProfileCard = ({ profile }) => {
+//   const navigate = useNavigate(); // Hook for navigation
+
+//   // Function to handle click on the card and navigate to the detailed profile
+//   const handleCardClick = () => {
+//     navigate(`/profile/${profile._id}`); // Navigate to the detailed profile page with the profile ID
+//   };
+
+//   return (
+//     <div className={styles.card} onClick={handleCardClick}>
+//       <div className={styles.content}>
+//         {/* Profile Image */}
+//         <div className={styles.image}>
+//           <img
+//             src={profile.profilePhoto  || "https://via.placeholder.com/100"}
+//             alt={profile.fullName || "Avatar"}
+//             className={styles.avatar}
+//           />
+//         </div>
+        
+//         {/* Profile Info */}
+//         <div className={styles.main}>
+//           <h2 className={styles.fullName}>{profile.fullName}</h2>
+//           <div className={styles.info}>
+//             <p><strong>Age:</strong> {profile.age}</p>
+//             <p><strong>Mobile Number:</strong> {profile.mobileNumber}</p>
+//             <p><strong>Mother Tongue:</strong>{profile.motherTongue}</p>
+//             {/* <p><strong>Date of Birth:</strong> {profile.dateOfBirth}</p> */}
+//             <p><strong>Location:</strong> {profile.city}</p>
+//             <p><strong>Education Level:</strong> {profile.educationLevel}</p>
+//             <p><strong>Annual Income:</strong> {profile.annualIncome}</p>
+//             <button className={styles.connect}>Connect Now</button>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default ProfileCard;
+
+
+
+
+import React from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
+import styles from "./ProfileCard.module.css"; // ProfileCard styling
+import stackingStyles from "./ProfileCard.module.css"; // Import stacking card styles
+
+const ProfileCard = ({ profile, cardIndex }) => {
+  const navigate = useNavigate(); // Hook for navigation
+
+  // Function to handle click on the card and navigate to the detailed profile
+  const handleCardClick = () => {
+    navigate(`/profile/${profile._id}`); // Navigate to the detailed profile page with the profile ID
+  };
+
   return (
-    <div className={styles.card}>
-     
+    <div
+      className={`${styles.card} ${stackingStyles.card} ${stackingStyles[`card${cardIndex + 1}`]}`} // Apply stacking card class
+      onClick={handleCardClick}
+    >
       <div className={styles.content}>
+        {/* Profile Image */}
         <div className={styles.image}>
           <img
-            src={profile.image || "https://via.placeholder.com/100"}
-            alt={profile.name || "Avatar"}
+            src={profile.profilePhoto || "https://via.placeholder.com/100"}
+            alt={profile.fullName || "Avatar"}
             className={styles.avatar}
           />
         </div>
-        <div className={styles.info}>
-        <div className={styles.header}>
-        <h2>{profile.name}</h2>
-      </div>
-      <div className={styles.main}>
-          <p>
-            <strong>Caste:</strong> {profile.caste || "N/A"}
-          </p>
-          <p>
-            <strong>Age / Height:</strong> {profile.age || "N/A"} /{" "}
-            {profile.height || "N/A"}
-          </p>
-          <p>
-            <strong>Education:</strong> {profile.education || "N/A"}
-          </p>
-          <p>
-            <strong>Occupation:</strong> {profile.occupation || "N/A"}
-          </p>
-          <p>
-            <strong>Annual Income:</strong> {profile.income || "N/A"}
-          </p>
-          <p>
-            <strong>Work Location:</strong> {profile.workLocation || "N/A"}
-          </p>
-          <p>
-            <strong>Native Place:</strong> {profile.nativePlace || "N/A"}
-          </p>
+
+        {/* Profile Info */}
+        <div className={styles.main}>
+          <h2 className={styles.fullName}>{profile.fullName}</h2>
+          <div className={styles.info}>
+          <p><strong>Name :</strong>{profile.fullName}</p>
+            <p><strong>Mobile Number:</strong> {profile.mobileNumber}</p>
+            <p><strong>Mother Tongue:</strong> {profile.motherTongue}</p>
+            {/* <p><strong>Date of Birth:</strong> {profile.dateOfBirth}</p> */}
+            <p><strong>Location:</strong> {profile.city}</p>
+            <p><strong>Education Level:</strong> {profile.educationLevel}</p>
+            <p><strong>Annual Income:</strong> {profile.annualIncome}</p>
+            
+            <button className={styles.mains_same}>
+      <div className={styles.submit}>Connect Now</div>
+    </button>
+
+            
           </div>
-          <button className={styles.connect} >Connect Now</button>
         </div>
       </div>
     </div>

@@ -1,13 +1,15 @@
 .card {
-    display: flex; /* Use flexbox to align items */
+    /* display: flex;  */
     flex-direction: row; /* Align items horizontally */
     align-items: center; /* Center items vertically */
     text-decoration: none; /* Remove link underline */
     /* padding: 5px; */
     border: 1px solid #ccc;
     border-radius: 8px;
-    margin-left: 100px;
+    display: flex;
+    margin-left: 50px;
     margin: 3px 0;
+    /* margin-top: 70px; */
     width: 100%;
     background-color: #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -28,7 +30,7 @@
   } */
   
   .image {
-    width: 95%; /* Set fixed width */
+    width: 80%; /* Set fixed width */
     height: 29vh; /* Set fixed height */
     object-fit: cover; /* Ensure the image maintains aspect ratio and fits inside the box */
     border-radius: 10px; /* Makes the image circular */
@@ -39,7 +41,8 @@
   }
   .maintext {
     text-align: center;
-    margin-right: 5px;
+    margin-right: 70px;
+    /* margin-right: 5px; */
     word-wrap: break-word; /* Ensure text wraps inside the card */
   }
   .cardmain{

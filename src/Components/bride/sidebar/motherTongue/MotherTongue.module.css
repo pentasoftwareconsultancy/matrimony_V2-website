@@ -1,0 +1,35 @@
+.main{
+    background-color: white;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 87%;
+      border-radius: 10px;
+}
+.mother{
+    display: flex;
+    font-size: 15px;
+    font-weight: 600;
+}
+.language{
+
+margin-left: 140px;
+background-color: azure;
+color: black;
+}
+.mainlanguage input{
+    /* margin-left: 10px; */
+    gap: 10px;
+}
+.radio{
+    margin-right: 5px;
+}
+.dropdown{
+    display: grid;
+    grid-template-columns: 1fr;
+   
+}
+.mainradio{
+    margin-left: 20px;
+    font-size: 15px;
+    color: rgb(60, 55, 55);
+}

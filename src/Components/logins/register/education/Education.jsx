@@ -1,449 +1,161 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Education.module.css";
 
-const Education = () => {
-  // Initialize formData with the correct structure
-  const [formData, setFormData] = useState({
-    education: {
-      educationLevel: "",
-      occupation: "",
-      annualIncome: "",
-    },
-    familyBackground: {
-      maritalStatus: "",
-      numChildren: "",
-      height: "",
-      bodyType: "",
-      weight: "",
-      fatherName: "",
-      fatherOccupation: "",
-      motherName: "",
-      motherOccupation: "",
-      numBrothers: "",
-      numSisters: "",
-      culturalValues: "",
-      relationshipToProfile: "",
-      aboutFamily: "",
-    },
-    astrology: {
-      community: "",
-      religion: "",
-      timeOfBirth: "",
-      cityOfBirth: "",
-      manglik: "",
-      gotra: "",
-      ras: "",
-      gan: "",
-      nadi: "",
-      charan: "",
-    },
-    partner: {
-      ageRangeFrom: "",
-      ageRangeTo: "",
-      partnerEducation: "",
-      partnerLocation: "",
-      partnerPackage: "",
-      partnerAbout: "",
-    },
-  });
-
-  const [isFormValid, setIsFormValid] = useState(false);
+const Education = ({ formData, setFormData, setIsFormValid }) => {
+  const [educationData, setEducationData] = useState(formData.education);
 
   useEffect(() => {
-    const isValid = validateForm();
+    const isValid = Object.values(educationData).every(value => value.trim() !== "");
     setIsFormValid(isValid);
-  }, [formData]);
-
-  const validateForm = () => {
-    const { education, familyBackground, astrology, partner } = formData;
-    // Ensure required fields for each section are filled
-    return (
-      education.educationLevel &&
-      education.occupation &&
-      education.annualIncome &&
-      familyBackground.maritalStatus &&
-      familyBackground.height &&
-      familyBackground.bodyType &&
-      astrology.religion &&
-      astrology.cityOfBirth &&
-      partner.ageRangeFrom &&
-      partner.ageRangeTo &&
-      partner.partnerEducation &&
-      partner.partnerAbout
-    );
-  };
+  }, [educationData, setIsFormValid]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    const section = e.target.dataset.section;
-
-    setFormData({
-      ...formData,
-      [section]: {
-        ...formData[section],
-        [name]: value,
-      },
-    });
+    setEducationData((prevData) => ({ ...prevData, [name]: value }));
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      education: { ...prevFormData.education, [name]: value },
+    }));
   };
 
   return (
-    <div className={styles.formContainer}>
-      <h2 className={styles.title}>Education and Family Details</h2>
-      <form>
-        {/* Section 1: Family Information */}
-        <div className={styles.section}>
-          <h3>Family Information</h3>
-          <div className={styles.formGroup}>
-            <label htmlFor="fatherName">Father Name</label>
-            <input
-              type="text"
-              id="fatherName"
-              name="fatherName"
-              className={styles.input}
-              value={formData.familyBackground.fatherName}
-              onChange={handleChange}
-              data-section="familyBackground"
-              placeholder="Father Name"
-            />
-          </div>
-          <div className={styles.formGroup}>
-            <label htmlFor="fatherOccupation">Father Occupation</label>
-            <input
-              type="text"
-              id="fatherOccupation"
-              name="fatherOccupation"
-              className={styles.input}
-              value={formData.familyBackground.fatherOccupation}
-              onChange={handleChange}
-              data-section="familyBackground"
-              placeholder="Father Occupation"
-            />
-          </div>
-          <div className={styles.formGroup}>
-            <label htmlFor="motherName">Mother Name</label>
-            <input
-              type="text"
-              id="motherName"
-              name="motherName"
-              className={styles.input}
-              value={formData.familyBackground.motherName}
-              onChange={handleChange}
-              data-section="familyBackground"
-              placeholder="Mother Name"
-            />
-          </div>
-          <div className={styles.formGroup}>
-            <label htmlFor="motherOccupation">Mother Occupation</label>
-            <input
-              type="text"
-              id="motherOccupation"
-              name="motherOccupation"
-              className={styles.input}
-              value={formData.familyBackground.motherOccupation}
-              onChange={handleChange}
-              data-section="familyBackground"
-              placeholder="Mother Occupation"
-            />
-          </div>
-          <div className={styles.formGroup}>
-            <label htmlFor="numBrothers">How Many Brothers</label>
-            <input
-              type="number"
-              id="numBrothers"
-              name="numBrothers"
-              className={styles.input}
-              value={formData.familyBackground.numBrothers}
-              onChange={handleChange}
-              data-section="familyBackground"
-              placeholder="Number of Brothers"
-            />
-          </div>
-          <div className={styles.formGroup}>
-            <label htmlFor="numSisters">How Many Sisters</label>
-            <input
-              type="number"
-              id="numSisters"
-              name="numSisters"
-              className={styles.input}
-              value={formData.familyBackground.numSisters}
-              onChange={handleChange}
-              data-section="familyBackground"
-              placeholder="Number of Sisters"
-            />
-          </div>
-          <div className={styles.formGroup}>
-            <label htmlFor="culturalValues">Cultural/Family Values</label>
-            <select
-              id="culturalValues"
-              name="culturalValues"
-              className={styles.input}
-              value={formData.familyBackground.culturalValues}
-              onChange={handleChange}
-              data-section="familyBackground"
-            >
-              <option>- Please Select -</option>
-              <option>Traditional</option>
-              <option>Modern</option>
-            </select>
-          </div>
-          <div className={styles.formGroup}>
-            <label htmlFor="relationshipToProfile">Relationship to Profile</label>
-            <select
-              id="relationshipToProfile"
-              name="relationshipToProfile"
-              className={styles.input}
-              value={formData.familyBackground.relationshipToProfile}
-              onChange={handleChange}
-              data-section="familyBackground"
-            >
-              <option>- Please Select -</option>
-              <option>Brother</option>
-              <option>Sister</option>
-            </select>
-          </div>
-          <div className={styles.formGroup}>
-            <label htmlFor="aboutFamily">About Yourself & Family*</label>
-            <textarea
-              id="aboutFamily"
-              name="aboutFamily"
-              className={styles.textarea}
-              value={formData.familyBackground.aboutFamily}
-              onChange={handleChange}
-              data-section="familyBackground"
-              placeholder="Write about yourself & family"
-            />
-          </div>
-        </div>
+    <div className={styles.educationContainer}>
+      <h2>Family Information</h2>
+<div className={styles.family}>
+      <div className={styles.main}>
+     
+      <label>Father Name*
+      <input type="text" name="fatherName" value={educationData.fatherName} onChange={handleChange} required />
+      </label>
+ 
+     
+      <label>Father Occupation*
+      <input type="text" name="fatherOccupation" value={educationData.fatherOccupation} onChange={handleChange} required />
+      </label>
+     
+      
+      <label>Mother Name*
+      <input type="text" name="motherName" value={educationData.motherName} onChange={handleChange} required />
+      </label>
+      
+     
+      <label>Mother Occupation*
+      <input type="text" name="motherOccupation" value={educationData.motherOccupation} onChange={handleChange} required />
+      </label>
+      
+      
+      <label>How Many Brothers*
+      <input type="number" name="numBrothers" value={educationData.numBrothers} onChange={handleChange} required />
+      </label>
+  
+      
+      <label>How Many Sisters*
+      <input type="number" name="numSisters" value={educationData.numSisters} onChange={handleChange} required />
+      </label>
 
-        {/* Section 2: Patrika / Astrology Details */}
-        <div className={styles.section}>
-          <h3>Patrika / Astrology Details</h3>
-          <div className={styles.formGroup}>
-            <label htmlFor="community">Community/ Mother Tongue</label>
-            <select
-              id="community"
-              name="community"
-              className={styles.input}
-              value={formData.astrology.community}
-              onChange={handleChange}
-              data-section="astrology"
-            >
-              <option>- Please Select -</option>
-              <option>Hindi</option>
-              <option>Marathi</option>
-            </select>
-          </div>
-          <div className={styles.formGroup}>
-            <label htmlFor="religion">Religion*</label>
-            <select
-              id="religion"
-              name="religion"
-              className={styles.input}
-              value={formData.astrology.religion}
-              onChange={handleChange}
-              data-section="astrology"
-            >
-              <option>- Please Select -</option>
-              <option>Hinduism</option>
-              <option>Islam</option>
-              <option>Christianity</option>
-            </select>
-          </div>
-          <div className={styles.formGroup}>
-            <label htmlFor="timeOfBirth">Time of Birth</label>
-            <input
-              type="text"
-              id="timeOfBirth"
-              name="timeOfBirth"
-              className={styles.input}
-              value={formData.astrology.timeOfBirth}
-              onChange={handleChange}
-              data-section="astrology"
-              placeholder="--:-- --"
-            />
-          </div>
-          <div className={styles.formGroup}>
-            <label htmlFor="cityOfBirth">City/Town of Birth*</label>
-            <input
-              type="text"
-              id="cityOfBirth"
-              name="cityOfBirth"
-              className={styles.input}
-              value={formData.astrology.cityOfBirth}
-              onChange={handleChange}
-              data-section="astrology"
-              placeholder="Enter city name here"
-            />
-          </div>
-          <div className={styles.formGroup}>
-            <label htmlFor="manglik">Are you Manglik</label>
-            <select
-              id="manglik"
-              name="manglik"
-              className={styles.input}
-              value={formData.astrology.manglik}
-              onChange={handleChange}
-              data-section="astrology"
-            >
-              <option>- Please Select -</option>
-              <option>Yes</option>
-              <option>No</option>
-            </select>
-          </div>
-          <div className={styles.formGroup}>
-            <label htmlFor="gotra">Gotra</label>
-            <input
-              type="text"
-              id="gotra"
-              name="gotra"
-              className={styles.input}
-              value={formData.astrology.gotra}
-              onChange={handleChange}
-              data-section="astrology"
-              placeholder="Gotra"
-            />
-          </div>
-          <div className={styles.formGroup}>
-            <label htmlFor="ras">Ras</label>
-            <input
-              type="text"
-              id="ras"
-              name="ras"
-              className={styles.input}
-              value={formData.astrology.ras}
-              onChange={handleChange}
-              data-section="astrology"
-              placeholder="Ras"
-            />
-          </div>
-          <div className={styles.formGroup}>
-            <label htmlFor="gan">Gan</label>
-            <input
-              type="text"
-              id="gan"
-              name="gan"
-              className={styles.input}
-              value={formData.astrology.gan}
-              onChange={handleChange}
-              data-section="astrology"
-              placeholder="Gan"
-            />
-          </div>
-          <div className={styles.formGroup}>
-            <label htmlFor="nadi">Nadi</label>
-            <input
-              type="text"
-              id="nadi"
-              name="nadi"
-              className={styles.input}
-              value={formData.astrology.nadi}
-              onChange={handleChange}
-              data-section="astrology"
-              placeholder="Nadi"
-            />
-          </div>
-          <div className={styles.formGroup}>
-            <label htmlFor="charan">Charan</label>
-            <input
-              type="text"
-              id="charan"
-              name="charan"
-              className={styles.input}
-              value={formData.astrology.charan}
-              onChange={handleChange}
-              data-section="astrology"
-              placeholder="Charan"
-            />
-          </div>
-        </div>
+      
+      <label>Cultural / Family Value*
+      <input type="text" name="culturalValues" value={educationData.culturalValues} onChange={handleChange} required />
+      </label>
+    
+     
+      <label>Relationship to Profile*
+      <input type="text" name="relationshipToProfile" value={educationData.relationshipToProfile} onChange={handleChange} required />
+      </label>
+   
+      
+      </div>
+      
+      <div className={styles.containar}>
+      <label>About Yourself & Family*
+      <textarea name="aboutFamily" value={educationData.aboutFamily} onChange={handleChange} required></textarea>
+      </label>
+      </div>
+</div>
+      <h2>Patrika / Astrology Details</h2>
+      <div className={styles.family}>
+      <div className={styles.patrika}>
+      
+      <label>Community / Mother Tongue*
+      <input type="text" name="community" value={educationData.community} onChange={handleChange} required />
+      </label>
+      
+     
+      <label>Religion*
+      <input type="text" name="religion" value={educationData.religion} onChange={handleChange} required />
+      </label>
+            
+      <label>Time of Birth*
+      <input type="text" name="timeOfBirth" value={educationData.timeOfBirth} onChange={handleChange} required />
+      </label>
+      
+      <label>City/Town of Birth*
+      <input type="text" name="cityOfBirth" value={educationData.cityOfBirth} onChange={handleChange} required />
+      </label>
+      
+      
+      <label>Are you Manglik?
+      <select name="manglik" value={educationData.manglik} onChange={handleChange} required>
+        <option value="">Select</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+        <option value="Don't Know">Don't Know</option>
+      </select>
+      </label>
+      
+      <label>Gotra
+      <input type="text" name="gotra" value={educationData.gotra} onChange={handleChange} />
+      </label>
+      
+     
+      <label>Ras
+      <input type="text" name="ras" value={educationData.ras} onChange={handleChange} />
+      </label>
+      
+      <label>Gan
+      <input type="text" name="gan" value={educationData.gan} onChange={handleChange} />
+      </label>
+      
+      
+      <label>Nadi
+      <input type="text" name="nadi" value={educationData.nadi} onChange={handleChange} />
+      </label>
+    
+ 
+      <label>Charan
+      <input type="text" name="charan" value={educationData.charan} onChange={handleChange} />
+      </label>
+</div>
 
-        {/* Section 3: More About Your Ideal Partner */}
-        <div className={styles.section}>
-          <h3>More About Your Ideal Partner</h3>
-          <div className={styles.formGroup}>
-            <label htmlFor="ageRange">Age Range*</label>
-            <div className={styles.inlineFields}>
-              <input
-                type="number"
-                id="ageRangeFrom"
-                name="ageRangeFrom"
-                className={styles.inputSmall}
-                value={formData.partner.ageRangeFrom}
-                onChange={handleChange}
-                data-section="partner"
-                placeholder="From"
-              />
-              <input
-                type="number"
-                id="ageRangeTo"
-                name="ageRangeTo"
-                className={styles.inputSmall}
-                value={formData.partner.ageRangeTo}
-                onChange={handleChange}
-                data-section="partner"
-                placeholder="To"
-              />
-            </div>
-          </div>
-          <div className={styles.formGroup}>
-            <label htmlFor="partnerEducation">Education*</label>
-            <select
-              id="partnerEducation"
-              name="partnerEducation"
-              className={styles.input}
-              value={formData.partner.partnerEducation}
-              onChange={handleChange}
-              data-section="partner"
-            >
-              <option>- Please Select -</option>
-              <option>Diploma</option>
-              <option>Bachelor's</option>
-              <option>Master's</option>
-            </select>
-          </div>
-          <div className={styles.formGroup}>
-            <label htmlFor="partnerLocation">Location</label>
-            <input
-              type="text"
-              id="partnerLocation"
-              name="partnerLocation"
-              className={styles.input}
-              value={formData.partner.partnerLocation}
-              onChange={handleChange}
-              data-section="partner"
-              placeholder="Enter Location"
-            />
-          </div>
-          <div className={styles.formGroup}>
-            <label htmlFor="partnerPackage">Package</label>
-            <select
-              id="partnerPackage"
-              name="partnerPackage"
-              className={styles.input}
-              value={formData.partner.partnerPackage}
-              onChange={handleChange}
-              data-section="partner"
-            >
-              <option>- Please Select -</option>
-              <option>Below $50k</option>
-              <option>$50k-$100k</option>
-              <option>Above $100k</option>
-            </select>
-          </div>
-          <div className={styles.formGroup}>
-            <label htmlFor="partnerAbout">About your Ideal Partner*</label>
-            <textarea
-              id="partnerAbout"
-              name="partnerAbout"
-              className={styles.textarea}
-              value={formData.partner.partnerAbout}
-              onChange={handleChange}
-              data-section="partner"
-              placeholder="Write about your ideal partner"
-            />
-          </div>
-        </div>
-      </form>
+</div>
+
+
+<div className={styles.family}>
+
+      <h2>More About Your Ideal Partner</h2>
+    
+      <div className={styles.main}>
+      <label>Age Range*
+      <div className={styles.ageRange}>
+        <input type="number" name="ageRangeFrom" value={educationData.ageRangeFrom} onChange={handleChange} required placeholder="From" />
+        <input type="number" name="ageRangeTo" value={educationData.ageRangeTo} onChange={handleChange} required placeholder="To" />
+      </div>
+</label>
+      <label>Education*
+      <input type="text" name="partnerEducation" value={educationData.partnerEducation} onChange={handleChange} required />
+      </label>
+      <label>Location
+      <input type="text" name="partnerLocation" value={educationData.partnerLocation} onChange={handleChange} />
+      </label>
+      <label>Package
+      <input type="text" name="partnerPackage" value={educationData.partnerPackage} onChange={handleChange} />
+      </label>
+     
+      </div>
+      <label>About Your Ideal Partner*
+      <textarea name="partnerAbout" value={educationData.partnerAbout} onChange={handleChange} required></textarea>
+      </label>
+      </div>
     </div>
   );
 };

@@ -28,14 +28,14 @@ const Sectionmain = () => {
         <div className={styles.leftSection}>
           <div className={styles.cards}>
             <div className={styles.main}>
-              <div className={styles.textmain}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+              <div className={styles.textmain}>Join Us Today
+              </div>
               <div className={styles.cardmain}>
                 <div className={styles.maintext}>
                   <p className={styles.text}>
-                    Nunc tempus magna ante, id tristique augue convallis sit
-                    amet. Pellentesque eleifend ipsum ac nibh lobortis, ac
-                    feugiat elit aliquam. Mauris ac erat non nibh consectetur
-                    commodo.
+                  Whether you’re looking for a traditional relationship or something modern, we are here to support your preferences and make your dreams come true.
+
+Let [Your Matrimony Website Name] help you find the love and companionship you deserve. Register now and take the first step toward a lifetime of happiness.
                   </p>
                   <div className={styles.navigation}>
                     <button
@@ -68,21 +68,23 @@ const Sectionmain = () => {
 
         {/* Right Section */}
         <div className={styles.rightSection}>
-          <h4>Lorem ipsum</h4>
+          {/* <h4>Lorem ipsum</h4> */}
           <div className={styles.dolor}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-            volutpat elit vitae lorem egestas, et consequat tellus tincidunt.
+          At [Your Matrimony Website Name], we’re committed to making your journey to find the perfect partner as seamless and 
+          meaningful as possible. Here’s why millions trust us as their preferred matchmaking platform:
           </div>
           <div className={styles.textmains}>
-            Nunc tempus magna ante, id tristique augue convallis sit amet,
-            elementum eleifend ipsum ac nibh lobortis, ac feugiat elit aliquam.
-            Mauris ac erat non nibh consectetur volutpat libero a hendrerit.
-            Aliquam sit amet lectus risus. Donec malesuada vitae velit et amet
-            commodo. Quisque id rutrum libero.
+          <div className={styles.profile}>Verified Profiles</div>
+          <div className={styles.profile}>Personalized Matchmaking</div>
+          <div className={styles.profile}>Respect for Diversity</div>
+          <div className={styles.profile}>Seamless User Experience</div>
+          <div className={styles.profile}>Privacy and Security</div>
+          <div className={styles.profile}>Success Stories</div>
+          <div className={styles.profile}>Expert Assistance</div>
           </div>
           <div className={styles.buttons}>
             <button className={styles.primaryButton}>Get Started</button>
-            <button className={styles.secondaryButton}>Second Button</button>
+          
           </div>
         </div>
       </div>

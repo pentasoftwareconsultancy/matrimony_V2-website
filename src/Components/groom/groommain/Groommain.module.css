@@ -1,10 +1,50 @@
-.Bridemain{
-    display: flex;
+.Groommain{
+   display: flex;
     margin-top: 70px;
+    margin-left: 150px;
+    margin-right: 100px;
 }
-.main{
-    width: 30%;
+.sidebar {
+  width: 30%;
+  position: sticky;
+  top: 0; /* Makes the sidebar stick to the top of the viewport when scrolling */
+  height: 100vh; /* Ensure the sidebar occupies full height of the screen */
+  overflow-y: auto; /* Adds scrolling if the content is taller than the viewport */
+  padding: 1em; /* Optional padding for better spacing */
 }
-.containmain{
-    width: 60%;
+
+.mainContent{
+    width: 80%;
+    /* margin-left: 0px; */
 }
+.searchInput{
+  margin-left: 20px;
+justify-content: end;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .Bridemain {
+      flex-direction: row; /* Stack elements vertically */
+      align-items: center; /* Center items horizontally */
+      margin-top: 20px; /* Reduce margin for smaller screens */
+    }
+  
+    .main,
+    .containmain {
+      width: 50%; /* Take up most of the screen width */
+      margin-bottom: 20px; /* Add spacing between stacked elements */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .Bridemain {
+      margin-top: 10px; /* Further reduce top margin for very small screens */
+    }
+  
+    .main,
+    .containmain {
+      width: 100%; /* Full width for narrow devices */
+      margin-bottom: 15px; /* Adjust spacing between elements */
+    }
+  }

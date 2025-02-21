@@ -37,6 +37,7 @@ const Horoscope = () => {
 
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
+      <div className={styles.main}>
       {/* Profile Photo */}
       <div className={styles.fieldGroup}>
         <label>Profile Photo*</label>
@@ -144,6 +145,7 @@ const Horoscope = () => {
             onChange={handleInputChange}
             className={styles.inputText}
           />
+        </div>
         </div>
       </div>
     </form>

@@ -1,24 +1,35 @@
 /* src/components/pages/eventspages/Eventspages.module.css */
 
 .container {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .heading {
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-align: center;
-    color: #333;
-    margin-bottom: 30px;
-  }
-  
-  .eventGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-  }
+  padding: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.eventGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Fixed to 3 columns */
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  width: 300px; /* Fixed width */
+  height: 400px; /* Fixed height */
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+}
   
   @media (max-width: 768px) {
     .heading {
