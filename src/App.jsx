@@ -20,7 +20,7 @@ import EventCard from "./Components/events/eventCard/EventCard";
 import Eventdetail from "./Components/events/eventsdetail/Eventsdetail";
 import GroomProfile from "./Components/groom/groomprofile/Groomprofile";
 import Vendorpages from "./page/vendorpages/Vendorpages";
-import VendorDetail from "./Components/venders/Vendordetail/Vendordetail";
+import VendorDetail from "./Components/venders/Vendordetails/Vendordetail";
 
 import MemberPage from "./page/memberpages/Memberpages";
 import MemberDetail from "./Components/member/memberdetail/Memberdetail";
