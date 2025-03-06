@@ -21,9 +21,8 @@ import Eventdetail from "./Components/events/eventsdetail/Eventsdetail";
 import GroomProfile from "./Components/groom/groomprofile/Groomprofile";
 import Vendorpages from "./page/vendorpages/Vendorpages";
 import VendorDetail from "./Components/venders/Vendordetails/Vendordetail";
-
 import MemberPage from "./page/memberpages/Memberpages";
-import MemberDetail from "./Components/member/memberdetail/Memberdetail";
+import MemberDetail from "./Components/member/memberdetails/Memberdetail";
 import Bridepages from "./page/bridepages/Bridepages";
 import Groommain from "./Components/groom/groommain/Groommain";
 import Logout from "./Components/logins/logout/Logout";
