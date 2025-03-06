@@ -21,6 +21,7 @@ import Eventdetail from "./Components/events/eventsdetail/Eventsdetail";
 import GroomProfile from "./Components/groom/groomprofile/Groomprofile";
 import Vendorpages from "./page/vendorpages/Vendorpages";
 import VendorDetail from "./Components/venders/Vendordetail/Vendordetail";
+
 import MemberPage from "./page/memberpages/Memberpages";
 import MemberDetail from "./Components/member/memberdetail/Memberdetail";
 import Bridepages from "./page/bridepages/Bridepages";
@@ -60,7 +61,7 @@ function AppContent() {
         <Route path="/card-detail/:id" element={<Newcardpage />} />
         <Route path="/groomprofile" element={<GroomProfile />} />
         <Route path="/vendors" element={<Vendorpages />} />
-        <Route path="/vendor-detail/:id" element={<VendorDetail />} />
+        <Route path="/vendordetail/:id" element={<VendorDetail />} />
         <Route path="/member" element={<MemberPage />} />
         <Route path="/members/:id" element={<MemberDetail />} />
         <Route path="/logout" element={<Logout/>}/>

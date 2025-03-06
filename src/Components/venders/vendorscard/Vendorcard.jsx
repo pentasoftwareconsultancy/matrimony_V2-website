@@ -22,7 +22,7 @@ const VendorCard = ({ vendor }) => {
         <p className={styles.time}><strong>Address:</strong> {address}</p>
         </div>
         {/* <p className={styles.description}>{description}</p> */}
-        <Link to={`/vendor-detail/${_id}`} className={styles.link}>
+        <Link to={`/vendordetail/${_id}`} className={styles.link}>
           Read More
         </Link>
       </div>
