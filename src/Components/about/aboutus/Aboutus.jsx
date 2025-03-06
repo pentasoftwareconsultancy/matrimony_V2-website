@@ -8,13 +8,27 @@ const Aboutus = () => {
         <h2>About Us</h2>
         <div className={styles.main}>
         <p className={styles.text}>
-          Welcome to [Your Matrimony Website Name] — your trusted partner in finding lifelong companionship and love.
+        "Welcome to Akhil Bhartiya Kunbi Samaj Bahuuddeshiya Mandal, a dedicated platform committed to bringing together like-minded 
+        individuals from the Kunbi community. Our mission is to help you find a life partner who shares your values, beliefs, and aspirations, 
+        ensuring a strong foundation for a happy and fulfilling marriage. We take pride in preserving cultural heritage while embracing modern
+         matchmaking methods to create meaningful and lasting relationships.
         </p>
         <p>
-          At [Your Matrimony Website Name], we understand that marriage is one of the most important milestones in a person’s life. That's why we have created a platform that is dedicated to helping individuals find their perfect match based on shared values, interests, and aspirations.
+        WeWe understand that finding the right match is one of the most important decisions in life, which is why we provide a trusted and secure 
+        space for genuine connections. With verified profiles, advanced matchmaking features, and user-friendly navigation, we make the search for
+         your soulmate easier and more efficient. Our platform is designed to cater to individuals seeking both tradition and compatibility, making
+          the journey of finding your ideal partner smooth and enjoyable.
         </p>
         <p>
-          Our mission is to provide a seamless, secure, and respectful experience for all users in their quest for love and companionship. Whether you are looking for a traditional match or something modern and flexible, we offer a variety of services to suit your needs.
+        BBeyond matchmaking, our platform fosters community bonding, upholds cultural traditions, and encourages meaningful relationships built 
+        on trust and compatibility. We strive to create an environment where individuals and families can connect, interact, and celebrate the 
+        essence of togetherness. Whether you're searching for love, companionship, or a lifelong partner, we are here to support and guide you 
+        every step of the way.
+        </p>
+        <p>
+        Join us today and take the first step toward a beautiful and lasting relationship! Let us help you turn your dreams into reality by 
+        connecting you with someone who truly understands and values you. With our commitment to authenticity, privacy, and personalized 
+        matchmaking, we ensure a seamless and enriching experience as you embark on this incredible journey of finding love and happiness."
         </p>
         </div>
       </div>
@@ -25,11 +39,11 @@ const Aboutus = () => {
         <ul className={styles.valuesList}>
   <li>
     <strong>Trust and Security:</strong>
-    <span>Your safety and privacy are our top priority. We take great care in ensuring that your personal information is kept secure.</span>
+    <span>We ensure verified profiles, strong privacy settings, and a safe matchmaking experience so you can find your partner with confidence.</span>
   </li>
   <li>
-    <strong>Personalized Matchmaking:</strong>
-    <span>We understand that every person is unique, so we offer advanced algorithms that match you based on your preferences and values.</span>
+    <strong>Authenticity:</strong>
+    <span>We believe in real connections. Every profile is genuine, ensuring meaningful and long-lasting relationships.</span>
   </li>
   <li>
     <strong>Respect for Diversity:</strong>
@@ -37,8 +51,24 @@ const Aboutus = () => {
   </li>
   <li>
     <strong>Commitment to Service:</strong>
-    <span>Our dedicated support team is always ready to assist you, ensuring your journey towards finding love is smooth and enjoyable.</span>
+    <span>Rooted in Kunbi culture, we respect traditions while providing a modern platform for easy and reliable matchmaking.</span>
   </li>
+  <li>
+    <strong>Easy Matchmaking :</strong>
+    <span>Our smart search filters and compatibility-based suggestions help you find the right partner effortlessly.</span>
+  </li>
+  <li>
+    <strong> Respect & Inclusivity :</strong>
+    <span>We value every individual and provide a welcoming, respectful, and supportive space for all.</span>
+  </li> <li>
+    <strong>Lifelong Bonds:</strong>
+    <span>We don’t just help you find a match; we help you build a beautiful and lasting relationship.</span>
+  </li>
+{/* 
+  <li>
+    <strong>Strong Support System :</strong>
+    <span>Our team is always here to guide and assist you in your journey toward finding the perfect life partner.</span>
+  </li> */}
 </ul>
       </div>
 

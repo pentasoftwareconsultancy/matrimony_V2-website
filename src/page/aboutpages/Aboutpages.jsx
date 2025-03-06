@@ -5,6 +5,7 @@ import Media from '../../Components/about/media/Media'
 import Aboutus from '../../Components/about/aboutus/Aboutus'
 import Gallary from '../../Components/about/gallary/Gallary'
 import Sectionmain from '../../Components/about/sectionmain/Sectionmain'
+import Testimonials from '../../Components/homes/testimonials/Testimonials'
 
 function Aboutpages() {
   return (
@@ -15,7 +16,8 @@ function Aboutpages() {
        <Media/>
        <Aboutus/>
        <Gallary/>
-       <Sectionmain/>
+       {/* <Sectionmain/> */}
+       <Testimonials/>
     </div>
   )
 }

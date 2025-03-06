@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Navbar.module.css";
-import logo from "../../Components/navbar/logo.png"
+import logo from "../../Components/navbar/logo.png";
+
 const Navbar = ({ isHomePage }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [dropdownVisible, setDropdownVisible] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);  // Track if user is logged in
 
   // Toggle menu for mobile
   const toggleMenu = () => {
@@ -24,24 +26,30 @@ const Navbar = ({ isHomePage }) => {
     };
   }, []);
 
+  // Check if user is logged in on initial load
+  useEffect(() => {
+    const loggedInStatus = localStorage.getItem("isLoggedIn");
+    setIsLoggedIn(loggedInStatus === "true");  // Set isLoggedIn state based on localStorage value
+  }, []);
+
+  // Handle logout
+  const handleLogout = () => {
+    localStorage.setItem("isLoggedIn", "false");
+    setIsLoggedIn(false);
+  };
+
   return (
     <header
       className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}
     >
       <div className={styles.navbar}>
         {/* Logo */}
-        {/* <div className={styles.logo}> */}
-          
         <a className={styles.logoContainer}>
-  <img src={logo} className={styles.logoImage} alt="Logo" />
-</a>
-        {/* </div> */}
+          <img src={logo} className={styles.logoImage} alt="Logo" />
+        </a>
 
         {/* Navigation Links */}
         <nav className={`${styles.navLinks} ${menuOpen ? styles.open : ""}`}>
-          
-
-          {/* Other Navigation Links */}
           <Link to="/" className={isHomePage ? styles.whiteText : styles.blackText}>
             Home
           </Link>
@@ -54,10 +62,6 @@ const Navbar = ({ isHomePage }) => {
           <Link to="/groommain" className={isHomePage ? styles.whiteText : styles.blackText}>
             Groom
           </Link>
-        
-
-
-
 
           {/* Services Dropdown */}
           <div
@@ -69,20 +73,17 @@ const Navbar = ({ isHomePage }) => {
               Services
             </Link>
             {dropdownVisible && (
-             <div className={styles.dropdownMenu}>
-             <Link to="/events" className={isHomePage ? styles.whiteText : styles.blackText}>
-               Events
-             </Link>
-             <Link to="/vendors" className={isHomePage ? styles.whiteText : styles.blackText}>
-               Vendors
-             </Link>
-             {/* <Link to="/news" className={isHomePage ? styles.whiteText : styles.blackText}>
-               News
-             </Link> */}
-             <Link to="/blog" className={isHomePage ? styles.whiteText : styles.blackText}>
-               Blogs
-             </Link>
-           </div>
+              <div className={styles.dropdownMenu}>
+                <Link to="/events" className={isHomePage ? styles.whiteText : styles.blackText}>
+                  Events
+                </Link>
+                <Link to="/vendors" className={isHomePage ? styles.whiteText : styles.blackText}>
+                  Vendors
+                </Link>
+                <Link to="/blog" className={isHomePage ? styles.whiteText : styles.blackText}>
+                  Blogs
+                </Link>
+              </div>
             )}
           </div>
 
@@ -94,11 +95,17 @@ const Navbar = ({ isHomePage }) => {
           </Link>
         </nav>
 
-        {/* Log In Button */}
+        {/* Log In / Log Out Button */}
         <div className={styles.login}>
-          <Link to="/login" className={isHomePage ? styles.whiteText : styles.blackText}>
-            Log In
-          </Link>
+          {isLoggedIn ? (
+            <button onClick={handleLogout} className={isHomePage ? styles.whiteText : styles.blackText}>
+              Log Out
+            </button>
+          ) : (
+            <Link to="/login" className={isHomePage ? styles.whiteText : styles.blackText}>
+              Log In
+            </Link>
+          )}
         </div>
 
         {/* Mobile Menu Toggle */}

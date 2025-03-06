@@ -12,12 +12,12 @@ const Eventspages = () => {
 
   // Filter states
   const [selectedLocation, setSelectedLocation] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("");
+  const [selectedName, setSelectedName] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
 
-  // State for unique locations and categories from events
+  // State for unique locations and event names
   const [locations, setLocations] = useState([]);
-  const [categories, setCategories] = useState([]);
+  const [names, setNames] = useState([]);
 
   useEffect(() => {
     const fetchEvents = async () => {
@@ -26,14 +26,14 @@ const Eventspages = () => {
         const data = await response.json();
         if (data.success) {
           setEvents(data.data);
-          setFilteredEvents(data.data); // Initially show all events
+          setFilteredEvents(data.data);
 
-          // Extract unique locations and categories from events
+          // Extract unique locations and names
           const uniqueLocations = [...new Set(data.data.map(event => event.location))];
-          const uniqueCategories = [...new Set(data.data.map(event => event.category))];
+          const uniqueNames = [...new Set(data.data.map(event => event.name))];
 
-          setLocations(uniqueLocations); // Set unique locations
-          setCategories(uniqueCategories); // Set unique categories
+          setLocations(uniqueLocations);
+          setNames(uniqueNames);
         } else {
           setError(data.message || "Failed to fetch events.");
         }
@@ -47,27 +47,25 @@ const Eventspages = () => {
     fetchEvents();
   }, []);
 
-  const handleSearch = (query) => {
-    setSearchQuery(query);
-  };
-
-  // Apply filters to events
+  // Apply filters
   useEffect(() => {
     const filtered = events.filter((event) => {
       const matchesLocation = selectedLocation
-        ? (event.location || "").toLowerCase() === selectedLocation.toLowerCase()
+        ? event.location?.toLowerCase() === selectedLocation.toLowerCase()
         : true;
-      const matchesCategory = selectedCategory
-        ? (event.category || "").toLowerCase() === selectedCategory.toLowerCase()
+      const matchesName = selectedName
+        ? event.name?.toLowerCase() === selectedName.toLowerCase()
         : true;
-      const matchesQuery =
-        (event.name && event.name.toLowerCase().includes(searchQuery.toLowerCase())) ||
-        (event.description && event.description.toLowerCase().includes(searchQuery.toLowerCase()));
+      const matchesQuery = searchQuery
+        ? (event.name?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          event.description?.toLowerCase().includes(searchQuery.toLowerCase()))
+        : true;
 
-      return matchesLocation && matchesCategory && matchesQuery;
+      return matchesLocation && matchesName && matchesQuery;
     });
+
     setFilteredEvents(filtered);
-  }, [events, selectedLocation, selectedCategory, searchQuery]);
+  }, [events, selectedLocation, selectedName, searchQuery]);
 
   if (loading) return <p>Loading events...</p>;
   if (error) return <p>{error}</p>;
@@ -78,13 +76,13 @@ const Eventspages = () => {
       <Eventfilter
         selectedLocation={selectedLocation}
         setSelectedLocation={setSelectedLocation}
-        selectedCategory={selectedCategory}
-        setSelectedCategory={setSelectedCategory}
-        handleSearch={handleSearch}
-        locations={locations} // Pass locations
-        categories={categories} // Pass categories
+        selectedName={selectedName}
+        setSelectedName={setSelectedName}
+        handleSearch={setSearchQuery}
+        locations={locations}
+        names={names}
       />
-      <h1 className={styles.heading}>Upcoming Events</h1>
+      <h1 className={styles.heading}>Events</h1>
       <div className={styles.eventGrid}>
         {filteredEvents.map((event) => (
           <EventCard key={event._id} event={event} />

@@ -34,52 +34,58 @@ const VendorDetail = () => {
 
   return (
     <div className={styles.cardDetail}>
-      <h1>{vendor.title || vendor.name}</h1>
+      <h1 className={styles.title}>{vendor.title || vendor.name}</h1>
       <div className={styles.eventContent}>
+        <div className={styles.imagecard}>
         <img
           src={vendor.profilePicUrl || "/images/placeholder.png"} // Local fallback
           alt={vendor.title || "Vendor"}
-          className={styles.image}
+          className={styles.imagemain}
           onError={(e) => (e.target.src = "/images/placeholder.png")} // Handle broken image
         />
+        </div>
         <div className={styles.textContent}>
-          <p className={styles.description}>{vendor.description}</p>
-          <p>
+        
+          <p className={styles.phonemain}>
             <strong>Address:</strong> {vendor.address}
           </p>
-          <p>
+          <p className={styles.phonemain}>
             <strong>Phone:</strong> {vendor.phone}
           </p>
-          <p>
+          <p className={styles.phonemain}>
             <strong>Email:</strong> {vendor.email}
           </p>
-          <p>
+          <p className={styles.phonemain}>
             <strong>Services:</strong> {vendor.services?.join(", ") || "Not specified"}
           </p>
-          <p>
+          <p className={styles.phonemain}>
             <strong>Verified:</strong> {vendor.isVerified ? "Yes" : "No"}
           </p>
-          <p>
+          <p className={styles.phonemain}>
             <strong>Ratings:</strong> {vendor.ratings.toFixed(1)} / 5
           </p>
         </div>
+        
       </div>
+      <p className={styles.descriptionmain}> <strong className={styles.descriptions}>Description:</strong><br/> {vendor.description}</p>
 
       {/* Gallery Section */}
       {vendor.galleryImages?.length > 0 && (
         <div className={styles.gallery}>
-          <h2>Gallery</h2>
+          <h2 className={styles.gallerymian}>WORK </h2>
           <div className={styles.galleryGrid}>
             {vendor.galleryImages.map((image, index) => (
               <div key={index} className={styles.galleryItem}>
                 <img
+                className={styles.imagegallery}
                   src={image.imageUrl || "/images/placeholder.png"}
                   alt={image.title || "Gallery Image"}
                   onError={(e) => (e.target.src = "/images/placeholder.png")}
                 />
                 <div className={styles.galleryInfo}>
-                  <p><strong>{image.title}</strong></p>
-                  <p>{image.description}</p>
+                  <p><strong className={styles.titlegallery}>Title: </strong><strong>{image.title}</strong></p>
+                  <p><strong className={styles.titlegallery}>Description: </strong>{image.description}</p>
+                  <p><strong className={styles.titlegallery}>Feedback: </strong>{image.feedback}</p>
                 </div>
               </div>
             ))}

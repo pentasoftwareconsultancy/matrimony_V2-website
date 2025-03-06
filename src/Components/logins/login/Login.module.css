@@ -8,20 +8,23 @@
   justify-content: center;
   padding: 20px;
 } */
-.main{
+.mainlogin{
   display: flex;
 }
 .imagemain{
   width: 100%;
-  height: 100vh;
+  height: 99vh;
+  /* background-image: url("../image/login.svg"); */
 }
 .cantainars1{
   width: 50%;
+  background-image: url("../image/logo2.webp");
   
 }
 .logoimage{
   width: 30%;
-  height: 30vh;
+  height: 25vh;
+  margin-bottom: 10px;
 }
 .cantainars2{
   width: 50%;
@@ -33,9 +36,10 @@
   background-image: url("../image/login.svg");
 } */
  .logos{
-  margin-top: 70px;
+  margin-top: 60px;
   /* width: 30%;
   height: 10%; */
+  margin-bottom: 10px;
 text-align: center;
  }
 .mainform {
@@ -43,13 +47,13 @@ text-align: center;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   padding: 50px;
   border-radius: 10px;
-  margin-left: 240px;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-left: 210px;
+  margin-top: -20px;
+  margin-bottom: 100px;
   /* justify-content: center; */
   flex-direction: column;
   background-color: white;
-  width: 300px;
+  width: 50%;
   gap: 10px;
 }
 
@@ -78,9 +82,15 @@ button:hover {
 .forgotPassword,
 .register {
   text-align: center;
+ 
+ 
+  gap: 10px;
   margin-top: 10px;
 }
-
+.register{
+  margin-left: 50px;
+  display: flex;
+}
 a {
   color: #e91e63;
   text-decoration: none;
@@ -88,7 +98,7 @@ a {
 
 .passwordWrapper {
   position: relative;
-  width: 100%;
+  width: 108%;
   margin-bottom: 20px;
 }
 
@@ -104,9 +114,9 @@ a {
 
 .toggle {
   position: absolute;
-  right: 10px;
+  right: 29px;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-20%);
   font-size: 18px;
   cursor: pointer;
 }

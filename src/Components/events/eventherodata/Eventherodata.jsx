@@ -5,9 +5,9 @@ import event from "../../events/image/event2.avif";
 export const eventData = {
   image: event,
   category: "Technology",
-  title: "Digital Meetup Event 2021",
-  date: "25 Feb, 2021",
-  location: "MicDrop South Melbourne, VIC 3205, AU",
+  title:  "Empowering the Kunbi Community,Building a Stronger Future",
+  date: "Akhil Bhartiya Kunbi Samaj Bahuuddeshiya Mandal : United we stand,",
+  location: " building a prosperous future together",
   buttons: [
     { text: "Purchase Ticket", link: "#" },
     { text: "View Details", link: "#" }

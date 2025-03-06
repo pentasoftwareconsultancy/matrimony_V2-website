@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Section.module.css";
 import { LuHeartHandshake } from "react-icons/lu";
 import image1 from "../../image/image2.jpg";
+import { Link } from "react-router-dom";
 
 const Section = () => {
   return (
@@ -12,11 +13,11 @@ const Section = () => {
             <div className={styles.heartIcon}>
               <LuHeartHandshake />
             </div>
-            <h2 className={styles.title}>
+            {/* <h2 className={styles.title}>
               The BVowed
               <br /> Method
             </h2>
-            <p className={styles.subtitle}>As simple as 1, 2, 3!</p>
+            <p className={styles.subtitle}>As simple as 1, 2, 3!</p> */}
           </div>
           <div className={styles.media}>
             <div className={styles.imagemains}>
@@ -33,11 +34,12 @@ const Section = () => {
           <div className={styles.step}>
             <h1 className={styles.stepNumber}>01</h1>
             <div className={styles.tell}>
-              <p className={styles.about}>Tell Us About You</p>
+              <p className={styles.about}>Tell Us About Yourself!"</p>
               <p className={styles.stepDescription}>
-                BVowed is an exclusive platform for singles looking for a life
-                partner. Tell us about yourself and go through our stringent
-                verification process to become a BVowed member.
+              "Tell us about yourself so others can get to know you better. Share your hobbies, interests, and values to 
+              find someone who truly connects with you. Mention what you’re looking for in a life partner to make your profile 
+              more meaningful. A clear and honest description increases your chances of finding the right match. Be yourself,
+               express your thoughts, and take the first step toward a happy and lasting relationship!"
               </p>
             </div>
           </div>
@@ -45,14 +47,13 @@ const Section = () => {
             <div className={styles.joinUs}>
               <h3 className={styles.joinTitle}>Join Us Today</h3>
               <p className={styles.joinText}>
-                Learn more about our exclusive platform and take your first step
-                to finding your life partner.
+              "Looking for a life partner? Join Akhil Bhartiya Kunbi Samaj Bahuuddeshiya Mandal today and start your journey to love!"
               </p>
-              <button className={styles.registerButton}>Register Now</button>
+              <button className={styles.registerButton}><Link to ="/register">Register Now</Link> </button>
             </div>
-            <p className={styles.footerText}>
+            {/* <p className={styles.footerText}>
               ✨ We have 15,000+ members online!
-            </p>
+            </p> */}
           </div>
         </div>
       </div>

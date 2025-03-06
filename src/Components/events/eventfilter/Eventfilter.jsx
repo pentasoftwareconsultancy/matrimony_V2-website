@@ -1,7 +1,15 @@
 import React from "react";
 import styles from "./Eventfilter.module.css";
 
-const Eventfilter = ({ selectedLocation, setSelectedLocation, selectedCategory, setSelectedCategory, handleSearch, locations, categories }) => {
+const Eventfilter = ({ 
+  selectedLocation, 
+  setSelectedLocation, 
+  selectedName, 
+  setSelectedName, 
+  handleSearch, 
+  locations, 
+  names 
+}) => {
   return (
     <div className={styles.container}>
       <h2 className={styles.title}>Search Event</h2>
@@ -10,7 +18,7 @@ const Eventfilter = ({ selectedLocation, setSelectedLocation, selectedCategory, 
           type="text"
           placeholder="Find your next event"
           className={styles.input}
-          onChange={(e) => handleSearch(e.target.value)} // Handle text search
+          onChange={(e) => handleSearch(e.target.value)}
         />
         <select
           className={styles.dropdown}
@@ -18,7 +26,7 @@ const Eventfilter = ({ selectedLocation, setSelectedLocation, selectedCategory, 
           onChange={(e) => setSelectedLocation(e.target.value)}
         >
           <option value="">Event Location</option>
-          {locations && locations.map((location, index) => (
+          {locations.map((location, index) => (
             <option key={index} value={location}>
               {location}
             </option>
@@ -26,19 +34,18 @@ const Eventfilter = ({ selectedLocation, setSelectedLocation, selectedCategory, 
         </select>
         <select
           className={styles.dropdown}
-          value={selectedCategory}
-          onChange={(e) => setSelectedCategory(e.target.value)}
+          value={selectedName}
+          onChange={(e) => setSelectedName(e.target.value)}
         >
-          <option value="">Event Category</option>
-          {categories && categories.map((category, index) => (
-            <option key={index} value={category}>
-              {category}
+          <option value="">Event Name</option>
+          {names.map((name, index) => (
+            <option key={index} value={name}>
+              {name}
             </option>
           ))}
         </select>
         <button className={styles.button}>Search Now</button>
       </div>
-      <p className={styles.footer}>Discover {locations.length} Upcoming Events</p>
     </div>
   );
 };

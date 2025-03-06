@@ -12,10 +12,10 @@
     background-color: rgba(0, 0, 0, 0.5); /* Overlay for text readability */
     padding: 20px;
     /* margin-top: 10px; */
-    height: 43vh;
+    height: 100vh;
     padding: 200px;
     /* margin-left: 5px; */
-    width: 90%;
+    width: 100%;
     border-radius: 40px;
     color: rgb(255, 252, 252);
   }

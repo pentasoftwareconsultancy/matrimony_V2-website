@@ -3,6 +3,7 @@ import styles from "./Sectionmain.module.css";
 import ganpati from "../../about/image/ganpati.jpg";
 import image2 from "../../about/image/image7.jpg";
 import image3 from "../../about/image/image3.jpg";
+import { Link } from "react-router-dom";
 
 const Sectionmain = () => {
   const images = [ganpati, image2, image3]; // Array of images
@@ -33,9 +34,8 @@ const Sectionmain = () => {
               <div className={styles.cardmain}>
                 <div className={styles.maintext}>
                   <p className={styles.text}>
-                  Whether you’re looking for a traditional relationship or something modern, we are here to support your preferences and make your dreams come true.
-
-Let [Your Matrimony Website Name] help you find the love and companionship you deserve. Register now and take the first step toward a lifetime of happiness.
+                  Find your perfect life partner in a safe and trusted community. Connect with genuine profiles, enjoy smart
+                   matchmaking, and start your journey toward a lifelong bond. Sign up now! 😊
                   </p>
                   <div className={styles.navigation}>
                     <button
@@ -70,10 +70,14 @@ Let [Your Matrimony Website Name] help you find the love and companionship you d
         <div className={styles.rightSection}>
           {/* <h4>Lorem ipsum</h4> */}
           <div className={styles.dolor}>
-          At [Your Matrimony Website Name], we’re committed to making your journey to find the perfect partner as seamless and 
-          meaningful as possible. Here’s why millions trust us as their preferred matchmaking platform:
+          Finding a life partner is one of the most important decisions in life, and we are here to make that journey easier, safer, and more
+           meaningful. At Akhil Bhartiya Kunbi Samaj Bahuuddeshiya Mandal, we provide a trusted and secure platform with verified profiles, 
+           ensuring genuine connections. Our matchmaking process is designed to help you find the right partner effortlessly with advanced 
+           filters and personalized suggestions. We respect traditions while embracing modern matchmaking to bring like-minded individuals 
+           together. With complete transparency, strong privacy measures, and dedicated support, we make sure your experience is smooth and 
+           hassle-free. Join us today and take the first step toward a happy and fulfilling future!
           </div>
-          <div className={styles.textmains}>
+          {/* <div className={styles.textmains}>
           <div className={styles.profile}>Verified Profiles</div>
           <div className={styles.profile}>Personalized Matchmaking</div>
           <div className={styles.profile}>Respect for Diversity</div>
@@ -81,9 +85,9 @@ Let [Your Matrimony Website Name] help you find the love and companionship you d
           <div className={styles.profile}>Privacy and Security</div>
           <div className={styles.profile}>Success Stories</div>
           <div className={styles.profile}>Expert Assistance</div>
-          </div>
+          </div> */}
           <div className={styles.buttons}>
-            <button className={styles.primaryButton}>Get Started</button>
+            <button className={styles.primaryButton}><Link to="/register">Get Started</Link></button>
           
           </div>
         </div>

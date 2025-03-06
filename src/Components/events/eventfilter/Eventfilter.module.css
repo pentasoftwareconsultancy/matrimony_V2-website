@@ -3,10 +3,17 @@
 .container {
     position: relative; /* Ensures that the container is above the image */
     margin-top: -100px; /* Adjust this value as needed */
-    max-width: 1200px;
+    max-width: 990px;
+    margin-left: 90px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.6); 
+    /* background: rgba(109, 109, 109, 0.5); */
+      border-radius: 10px;     
     padding: 20px;
+    padding-bottom: 50px;
     z-index: 2; /* Ensures this content appears above the background image */
   }
+  
   .overlay {
     position: absolute;
     top: 0;
@@ -22,7 +29,8 @@
     font-size: 35px;
     margin-bottom: 20px;
     text-align: center;
-    color: #faf7f7;
+    /* color: #151515; */
+    color: rgb(254, 254, 254);
   }
   
   .searchBox {

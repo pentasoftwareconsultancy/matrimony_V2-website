@@ -2,9 +2,9 @@
 
   .contactInfo{
     padding-top: 50px;
-    width: 70%;
+    width: 100%;
     padding-bottom: 50px;
-    margin-left: 20px;
+    margin-left: 10px;
     padding-left: 50px;
     margin-top: 25px;
     padding-right: 70px;
@@ -148,6 +148,7 @@ margin-right: 200px;
   width: 80%;
   max-width: 600px;
   background-color: #fff;
+  height: 95vh;
   padding: 30px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -171,8 +172,8 @@ margin-right: 200px;
   transition: all 0.3s ease;
 }
 .messageboxfield{
-  width: 94%;
-  /* height: 20vh; */
+  width: 99%;
+  height: 5vh;
 }
 .contactformfield input:focus,
 .messageboxfield textarea:focus {
@@ -188,7 +189,9 @@ margin-right: 200px;
 .messageboxfield textarea {
   resize: none;
 }
-
+.focus{
+  height: 10vh;
+}
 /* Focus Span (For Custom Input Animation) */
 /* .focus {
   position: absolute;

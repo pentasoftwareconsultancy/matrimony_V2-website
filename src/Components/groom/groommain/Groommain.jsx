@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import styles from "./Groommain.module.css";
 import ProfileList from "../../bride/profilelist/Profilelist";
 import Sidebar from "../../bride/sidebar/sidebar/sidebar";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 function Groommain() {
   const [query, setQuery] = useState(""); // for text search
@@ -90,13 +92,16 @@ function Groommain() {
         <Sidebar handleFilterChange={handleFilterChange} />
       </div>
       <div className={styles.mainContent}>
-        <input
-          type="text"
-          value={query}
-          onChange={handleInputChange}
-          placeholder="Search profiles..."
-          className={styles.searchInput}
-        />
+         <div className={styles.searchWrapper}>
+                 <input
+                   type="text"
+                   value={query}
+                   onChange={handleInputChange}
+                   placeholder="Search profiles..."
+                   className={styles.searchInput}
+                 />
+                 <FontAwesomeIcon icon={faSearch} className={styles.searchIcon} />
+               </div>
         {filters.selectedMotherTongue && (
           <div className={styles.filterTag}>
             Filtered by Mother Tongue: {filters.selectedMotherTongue}

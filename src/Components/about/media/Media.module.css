@@ -8,9 +8,11 @@
   }
   
   .section{
-    font-size: 40px;
+    font-size: 18px;
+    margin-top: 50px;
     font-weight: 700;
     color: rgb(98, 12, 98);
+    text-align: justify;
     margin-bottom: 1rem;
   }
   .textSection {

@@ -30,11 +30,12 @@ function Abouthero() {
         </div>
         <div className={styles.textContainer}>
           <div className={styles.title}>FIND YOUR</div>
-          <div className={styles.subtitle}>Best Match</div>
+          <div className={styles.subtitle}>Find your perfect match today!</div>
           <p className={styles.description}>
-            A Best Match Couple exemplifies a perfect blend of love, respect, and compatibility. They thrive together by nurturing their
-            bond, growing individually, and supporting each other in every phase of life. Their relationship is a testament to the beauty
-            of a well-matched partnership.
+          Love and respect make a strong relationship.
+Support each other through every journey.
+Grow together and create a happy life.
+A true match brings joy and harmony. 💕
           </p>
         </div>
       </div>

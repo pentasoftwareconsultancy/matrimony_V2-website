@@ -71,7 +71,7 @@
     display: flex;
     background-color: #fff;
     border-radius: 45px;
-    height: 50vh;
+    height: 65vh;
     padding: 50px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     text-align: left;
@@ -120,7 +120,7 @@ font-size: 15px;
   .navigation {
    
     display: flex;
-    margin-top: -15px;
+    margin-top: 35px;
     justify-content: center;
     gap: 10px;
   }
@@ -152,12 +152,13 @@ font-size: 15px;
     display: flex;
     gap: 15px;
     /* margin-left: 100px; */
-    margin-top: 10px;
+    margin-top: 40px;
   }
   
   .primaryButton {
     background-color:#ff5069;
     justify-content: center;
+    
     margin-left: 200px;
     color: #fff;
     border: none;
@@ -177,7 +178,7 @@ font-size: 15px;
     background-color: #f5f5f5;
   }
   .dolor{
- font-size: 25px;
+ font-size: 17px;
  margin-top: 20px;
  text-align: justify;
  margin-bottom: 20px;

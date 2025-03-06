@@ -30,7 +30,7 @@
   margin-bottom: 0.5rem;
 }
 .logoImage {
-  width: 250px;
+  width: 210px;
   height: auto;
   margin-bottom: 10px;
 }
@@ -107,8 +107,13 @@
 }
 .email svg {
   color: #faec24; /* Color for FaLocationDot icon */
-  font-size: 20px;
-  margin-top: 0px;
+  /* font-size: 20px; */
+  /* margin-top: 35px; */
+}
+.mainicon{
+  /* margin-top: 20px; */
+  padding-top: 1px;
+  /* font-size: 40px; */
 }
 .text {
   font-size: 18px;

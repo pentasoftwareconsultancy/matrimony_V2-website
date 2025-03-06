@@ -3,14 +3,14 @@ import styles from'./Featurees.module.css';
 
 function Featurees() {
     const featureTexts = [
-        "Personalized attention is given to each profile.",
-        "All profiles are verified and authentic.",
-        "The database includes profiles from all over the world.",
-        "High-quality database of eligible individuals of all ages.",
-        "Individualized assistance is offered throughout the process.",
-        "Strict confidentiality of information is maintained.",
-        "One-time nominal registration fee is applicable.",
-        "Pioneers in research on Maharashtrian wedding industry.",
+       "Find your perfect match within the Kunbi community.",
+        "Verified profiles for a safe matchmaking experience.",
+        "Smart filters to match your preferences.",
+       "Blend of tradition and modern matchmaking.",
+        "Personalized support for your marriage journey.",
+        "Easy-to-use platform for effortless searching.",
+        "Meaningful connections for lifelong happiness.",
+        // "Pioneers in research on Maharashtrian wedding industry.",
       ];
     
       useEffect(() => {
@@ -39,7 +39,7 @@ function Featurees() {
         <div className={styles.container}>
           <div className="row">
             <div className="col-lg-12">
-              <h2 className={styles.sectionTitle}>Reasons why you will find the PERFECT match on lagnagath.in</h2>
+              <h2 className={styles.sectionTitle}>"Why Akhil Bhartiya Kunbi Samaj Bahuuddeshiya Mandal, Akola is the Perfect Place to Find Your Ideal Match!"</h2>
             </div>
           </div>
     

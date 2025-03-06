@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Footer.module.css";
+import { Link } from "react-router-dom";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
@@ -29,30 +30,30 @@ const Footer = () => {
         <div className={styles.section}>
           <h3 className={styles.links}>Navigation</h3>
           <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Bride</li>
-            <li>Groom</li>
+            <li><Link to="/">Home</Link> </li>
+            <li><Link to="/about">About</Link></li>
+            <li><Link to="/bride"> Bride</Link></li>
+            <li><Link to="/groom"> Groom</Link></li>
           </ul>
         </div>
 
         <div className={styles.section}>
           <h3 className={styles.links}>Quick Links</h3>
           <ul>
-            <li>Contact Us</li>
-            <li>FAQs</li>
-            <li>Reading</li>
-            <li>Pages</li>
+            <li><Link to="/contact">Contact Us</Link></li>
+            <li><Link to="/member">Committee Members</Link></li>
+            <li><Link to="/vendors">Vendors</Link></li>
+            <li><Link to="/events">Event</Link></li>
           </ul>
         </div>
 
         <div className={styles.section}>
           <h3 className={styles.links}>Services</h3>
           <ul>
-            <li>News</li>
-            <li>Contact</li>
-            <li>Blog</li>
-            <li>Login </li>
+            {/* <li>News</li>
+            <li>Contact</li> */}
+            <li><Link to="/blog">Blog</Link></li>
+            <li> <Link to="/login">Login</Link> </li>
           </ul>
         </div>
       </div>
@@ -62,10 +63,10 @@ const Footer = () => {
           <FaLocationDot />: 2022 Grance Template - All Rights Reserved
         </p>
         <p className={styles.phone}>
-          <FaPhoneAlt />: 5768797999
+          <FaPhoneAlt /> : 5768797999
         </p>
         <p className={styles.email}>
-          <MdEmail />: nexuxctc2020@gmail.com
+          <MdEmail className={styles.mainicon} /> : nexuxctc2020@gmail.com
         </p>
         <div className={styles.icons}>
           <span className={styles.iconinsta}>

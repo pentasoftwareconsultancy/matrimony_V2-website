@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import styles from "./Bridemain.module.css";
-import Sidebar from '../sidebar/sidebar/sidebar';
+import Sidebar from '../sidebar/sidebar/Sidebar';
 import ProfileList from '../profilelist/Profilelist';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons'; // Import search icon
 import { useParams } from 'react-router-dom';
 
 function Bridemain() {
@@ -64,6 +66,7 @@ function Bridemain() {
         />
       </div>
       <div className={styles.mainContent}>
+      <div className={styles.searchWrapper}>
         <input
           type="text"
           value={query}
@@ -71,8 +74,10 @@ function Bridemain() {
           placeholder="Search profiles..."
           className={styles.searchInput}
         />
-        <ProfileList profiles={filteredProfiles} />
+        <FontAwesomeIcon icon={faSearch} className={styles.searchIcon} />
       </div>
+      <ProfileList profiles={filteredProfiles} />
+    </div>
     </div>
   );
 }

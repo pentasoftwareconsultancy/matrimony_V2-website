@@ -15,12 +15,20 @@ const Eventshero = () => {
     >
       <div className={styles.overlay}>
         <div className={styles.content}>
-          <span className={styles.category}>{category}</span>
-          <h1 className={styles.title}>{title}</h1>
-          <p className={styles.details}>
-            {date} • {location}
-          </p>
-          <div className={styles.buttons}>
+          {/* <span className={styles.category}>{category}</span> */}
+          <h1 className={styles.title}>
+  {title.split(',').map((part, index) => (
+    <span key={index}>
+      {part}
+      {index === 0 && <br />}
+    </span>
+  ))}
+</h1>
+<p className={styles.details}>
+  {date} <br />
+  {location}
+</p>
+          {/* <div className={styles.buttons}>
             {buttons.map((button, index) => (
               <a
                 key={index}
@@ -30,7 +38,7 @@ const Eventshero = () => {
                 {button.text}
               </a>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

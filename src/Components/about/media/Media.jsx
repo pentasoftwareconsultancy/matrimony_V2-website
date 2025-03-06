@@ -11,14 +11,19 @@ const Media = () => {
     <div className={styles.container}>
       <div className={styles.textSection}>
         <div className={styles.section}>
-          Now say good-bye to your neighborhood matchmakers, astrological charts, 
-          and the numerous dating apps on your phone.
+        "Finding your ideal life partner has never been easier! Akhil Bhartiya Kunbi Samaj Bahuuddeshiya Mandal is dedicated to helping you 
+        connect with like-minded individuals who share your values, beliefs, and aspirations. With a trusted and secure platform, verified 
+        profiles, and advanced matchmaking features, we ensure a seamless and meaningful experience in your search for a life partner.
+<br/><br/>
+Our community is built on authenticity, tradition, and compatibility, making it the perfect place to form genuine connections. Whether
+ you're looking for companionship, love, or a lifelong commitment, we provide the right tools to help you take the next step toward a happy 
+ and fulfilling future. Join today and begin your journey toward a beautiful and lasting relationship!"
         </div>
-        <p className={styles.you}>
+        {/* <p className={styles.you}>
           Register online in a matter of minutes and be ready to be DWow’ed by 
           someone you will find for yourself!
         </p>
-        <button className={styles.button}>Get Started</button>
+        <button className={styles.button}>Get Started</button> */}
       </div>
       <div className={styles.imageGrid}>
       

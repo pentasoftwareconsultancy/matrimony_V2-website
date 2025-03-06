@@ -75,7 +75,8 @@
     line-height: 1.5; /* Better line spacing for readability */
     color: white;
     text-align: left;
-    font-size: large;
+    text-align: center;
+    font-size: 20px;
     flex-grow: 1; /* Allow text to take remaining space */
   }
   
@@ -84,21 +85,21 @@
   }
   
   /* Alternating background colors */
-  .featuresDivWrap ul.featuresUl li:nth-child(1) { background: #2581bc; }
-  .featuresDivWrap ul.featuresUl li:nth-child(2) { background: #79c142; }
-  .featuresDivWrap ul.featuresUl li:nth-child(3) { background: #e34748; }
-  .featuresDivWrap ul.featuresUl li:nth-child(4) { background: #25afcc; }
-  .featuresDivWrap ul.featuresUl li:nth-child(5) { background: #974f9f; }
-  .featuresDivWrap ul.featuresUl li:nth-child(6) { background: #f49d1e; }
-  .featuresDivWrap ul.featuresUl li:nth-child(7) { background: #50c1ab; }
-  .featuresDivWrap ul.featuresUl li:nth-child(8) { background: #c75aa2; }
+  .featuresDivWrap ul.featuresUl li:nth-child(1) { background:rgb(243, 75, 75); }
+  .featuresDivWrap ul.featuresUl li:nth-child(2) { background:rgb(248, 179, 51); }
+  .featuresDivWrap ul.featuresUl li:nth-child(3) { background:rgb(246, 246, 66); }
+  .featuresDivWrap ul.featuresUl li:nth-child(4) { background: rgb(51, 181, 51); }
+  .featuresDivWrap ul.featuresUl li:nth-child(5) { background:rgb(74, 74, 235); }
+  .featuresDivWrap ul.featuresUl li:nth-child(6) { background: rgb(139, 65, 191); }
+  .featuresDivWrap ul.featuresUl li:nth-child(7) { background: Violet; }
+  .featuresDivWrap ul.featuresUl li:nth-child(8) { background: rgb(84, 64, 84); }
   
   .featuresDivWrap ul.featuresUl li:nth-child(even) {
     transform: translateX(30%); /* Shift even rows to the right */
   }
   
   .container {
-    background-color: #f4f1f1;
+    background-color: #fae9e9;
     padding-left: 150px;
     padding-bottom: 50px;
     padding-right: 150px;
@@ -111,7 +112,7 @@
     text-align: center;
     font-size: x-large;
     color: black;
-    margin-top: 40px;
+    margin-top: -20px;
   }
   
   
@@ -130,7 +131,8 @@
   }
 
   .featuresDivWrap ul.featuresUl li .featuresText {
-      font-size: 18px; /* Adjust font size */
+      font-size: 19px; /* Adjust font size */
+      text-align: center;
   }
 
   .featuresDivWrap ul.featuresUl li .featuresImg {

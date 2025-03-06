@@ -7,17 +7,50 @@
 .sidebar {
   width: 30%;
   position: sticky;
-  top: 0; /* Makes the sidebar stick to the top of the viewport when scrolling */
-  height: 100vh; /* Ensure the sidebar occupies full height of the screen */
-  overflow-y: auto; /* Adds scrolling if the content is taller than the viewport */
-  padding: 1em; /* Optional padding for better spacing */
+  top: 0;
+  height: 150vh; /* Adjust height */
+  overflow-y: auto; /* Allow vertical scrolling */
+  padding: 1em;
+  -ms-overflow-style: none;  /* Hide scrollbar for Internet Explorer */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+.sidebar::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Webkit browsers (Chrome, Safari) */
 }
 
 .mainContent{
     width: 80%;
 }
-.searchInput{
-  margin-left: 20px;
+/* Assuming you are using a CSS module or global styles */
+.searchWrapper {
+  margin-left: 430px;
+  position: relative; /* Needed to position the icon inside the input */
+  width: 100%;
+  border-radius: 50px;
+  max-width: 400px; /* Adjust based on your design */
+}
+
+.searchInput {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px 30px 12px 12px; /* Adjust padding for better look */
+  /* border-radius:200px;  */
+  border: 100px solid #4173b9;
+  background-color: rgb(255, 253, 253);
+  font-size: 16px; /* Adjust font size if needed */
+  box-sizing: border-box; /* Ensure padding + border is included in the width */
+}
+
+.searchIcon {
+  position: absolute;
+  top: 50%;
+margin-top: 10px;
+  border-radius: 30px;
+  right: 10px; /* Adjust right position */
+  transform: translateY(-50%); /* Center the icon vertically */
+  color: #888; /* Icon color */
+  cursor: pointer;
 }
 
 

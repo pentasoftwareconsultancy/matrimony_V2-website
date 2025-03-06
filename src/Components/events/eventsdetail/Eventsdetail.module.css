@@ -10,23 +10,25 @@ background: radial-gradient(circle, rgba(251,63,212,1) 0%, rgba(94,61,244,0.9360
   font-family: 'Arial', sans-serif;
 }
 .name{
-  font-size: 50px;
-  margin-top: 40px;
-  color: rgb(247, 10, 10);
-  margin-bottom: 45px;
+  font-size: 55px;
+  margin-top: 20px;
+  color: rgb(22, 22, 22);
+  text-align: center;
+  margin-bottom: 35px;
 }
 
 .eventContent {
+  /* width: 40%; */
   display: flex;
   flex-direction: row;
   align-items: center;
   margin-bottom: 30px;
 }
 
-.image {
-  width: 50%; /* Set image width to take 40% of the container */
-  height: 60vh; /* Maintain aspect ratio for the image */
-  max-height: 60vh; /* Ensure the height doesn't exceed 50% of the viewport */
+.imagemain {
+  width: 55%; /* Set image width to take 40% of the container */
+  height: 70vh; /* Maintain aspect ratio for the image */
+  /* Ensure the height doesn't exceed 50% of the viewport */
   border-radius: 8px; /* Smooth rounded corners */
   margin-right: 20px; /* Space between the image and text */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add smooth transitions for hover effects */
@@ -37,19 +39,25 @@ background: radial-gradient(circle, rgba(251,63,212,1) 0%, rgba(94,61,244,0.9360
 .image:hover {
   transform: scale(1.05);
 }
-
+.descriptionmain{
+  margin-left: 100px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  margin-right: 150px;
+  text-align: justify;
+}
 .textContent {
-  width: 60%;
+  width: 50%;
   margin-left: 70px;
 }
 
-h1 {
+/* h1 {
   font-size: 3rem;
   text-align: center;
   color: #333;
-  /* text-align: left; */
+ 
   margin-bottom: 20px;
-}
+} */
 
 .description, .content {
   font-size: 1rem;
@@ -63,12 +71,13 @@ h1 {
 }
 .eventDetails {
   font-size: 25px;
-  color: #f8f7f7;
+  color: #706e6e;
   margin-bottom: 10px;
+  /* margin-left: 15px; */
 }
 
 .eventDetails strong {
-  color: #ff5069; /* Highlighting the labels with a primary color */
+  color: #131212; /* Highlighting the labels with a primary color */
 }
 
 .participantTitle {
@@ -102,7 +111,7 @@ h1 {
 }
 
 .participant p strong {
-  color: #ff5069;
+  color: #070707;
 }
 
 .participant:hover {
@@ -185,13 +194,18 @@ h1 {
 .attendees {
 box-shadow: #555;
 border-radius: 20px;
+/* margin-left: 100px; */
+/* padding-left: 100px; */
   padding: 20px;
   background-color: #fffdfd;
 }
 .maincard{
   display: grid;
+  /* margin-right: 100px; */
+  padding-left: 80px;
   list-style-type: none;
-  gap: 20px;
+  /* width: 100%; */
+  /* gap: 10px; */
   grid-template-columns: 1fr 1fr 1fr ;
 }
 
@@ -199,14 +213,19 @@ border-radius: 20px;
   list-style: none;
   padding: 0;
 }
-
+.attendeemain{
+text-align: center;
+margin-bottom: 20px;
+font-size: 30px;
+}
 .attendee {
   /* display: grid;
   grid-template-columns: 50px 1fr 1fr; */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 border-radius: 20px;
+padding: 15px;
   gap: 10px;
-  width: 70%;
+  width: 90%;
   align-items: center;
   height: 40vh;
   /* padding: 15px; */
@@ -216,11 +235,12 @@ border-radius: 20px;
 .attendeeImage {
   width: 100%;
   height: 20vh;
-  border-radius: 10%;
+  border-radius: 5%;
   object-fit: cover;
 }
 .phone{
-  text-align: center;
+  /* text-align: center; */
+  margin-left: 15px;
 }
 .attendeeDetails {
   /* display: flex; */

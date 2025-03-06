@@ -25,6 +25,7 @@ import MemberPage from "./page/memberpages/Memberpages";
 import MemberDetail from "./Components/member/memberdetail/Memberdetail";
 import Bridepages from "./page/bridepages/Bridepages";
 import Groommain from "./Components/groom/groommain/Groommain";
+import Logout from "./Components/logins/logout/Logout";
 
 function AppContent() {
   const location = useLocation();
@@ -62,6 +63,7 @@ function AppContent() {
         <Route path="/vendor-detail/:id" element={<VendorDetail />} />
         <Route path="/member" element={<MemberPage />} />
         <Route path="/members/:id" element={<MemberDetail />} />
+        <Route path="/logout" element={<Logout/>}/>
       </Routes>
       {/* Only render Footer if it's not the login page */}
       {!isLoginPage && !isRegisterPage && !isProfilePage && <Footer />}

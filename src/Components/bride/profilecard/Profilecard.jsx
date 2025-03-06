@@ -44,12 +44,17 @@
 // export default ProfileCard;
 
 
-
-
 import React from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 import styles from "./ProfileCard.module.css"; // ProfileCard styling
 import stackingStyles from "./ProfileCard.module.css"; // Import stacking card styles
+import Scrolltotop from "../../scrolltotop/Scrolltotop";
+
+// Function to capitalize the first letter of a string
+const capitalizeFirstLetter = (name) => {
+  if (!name) return "";
+  return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+};
 
 const ProfileCard = ({ profile, cardIndex }) => {
   const navigate = useNavigate(); // Hook for navigation
@@ -64,6 +69,7 @@ const ProfileCard = ({ profile, cardIndex }) => {
       className={`${styles.card} ${stackingStyles.card} ${stackingStyles[`card${cardIndex + 1}`]}`} // Apply stacking card class
       onClick={handleCardClick}
     >
+      <Scrolltotop/>
       <div className={styles.content}>
         {/* Profile Image */}
         <div className={styles.image}>
@@ -76,22 +82,23 @@ const ProfileCard = ({ profile, cardIndex }) => {
 
         {/* Profile Info */}
         <div className={styles.main}>
-          <h2 className={styles.fullName}>{profile.fullName}</h2>
+          <h2 className={styles.fullName}>
+            {capitalizeFirstLetter(profile.fullName)} {/* Capitalize first letter */}
+          </h2>
+          
           <div className={styles.info}>
-          <p><strong>Name :</strong>{profile.fullName}</p>
+            <p><strong>Name :</strong> {capitalizeFirstLetter(profile.fullName)}</p>
             <p><strong>Mobile Number:</strong> {profile.mobileNumber}</p>
             <p><strong>Mother Tongue:</strong> {profile.motherTongue}</p>
             {/* <p><strong>Date of Birth:</strong> {profile.dateOfBirth}</p> */}
             <p><strong>Location:</strong> {profile.city}</p>
             <p><strong>Education Level:</strong> {profile.educationLevel}</p>
             <p><strong>Annual Income:</strong> {profile.annualIncome}</p>
-            
-            <button className={styles.mains_same}>
-      <div className={styles.submit}>Connect Now</div>
-    </button>
-
-            
           </div>
+         
+          <button className={styles.mains_same}>
+            <div className={styles.submit}>Connect Now</div>
+          </button>
         </div>
       </div>
     </div>
@@ -99,3 +106,4 @@ const ProfileCard = ({ profile, cardIndex }) => {
 };
 
 export default ProfileCard;
+

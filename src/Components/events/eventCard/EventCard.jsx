@@ -16,8 +16,10 @@ const EventCard = ({ event }) => {
     location,
   } = event;
 
-  console.log("Event Data:", event); // Debugging to ensure imageUrl is correct
-  console.log("Image URL:", imageUrl);
+  // Limit description length
+  const truncateText = (text, limit) => {
+    return text.length > limit ? text.substring(0, limit) + "..." : text;
+  };
 
   return (
     <div className={styles.card}>
@@ -36,7 +38,7 @@ const EventCard = ({ event }) => {
           <strong>Location: </strong>{location || "No location available"}
         </p>
         <p className={styles.text}>
-          <strong>Description: </strong>{description}
+          <strong>Description: </strong>{truncateText(description, 50)}
         </p>
         <Link to={`/events/${_id}`} className={styles.link}>
           Read More

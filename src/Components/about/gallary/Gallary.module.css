@@ -1,6 +1,7 @@
 .container{
     display: flex;
-    padding-left: 280px
+    padding-left: 280px;
+    margin-bottom: 50px;
 }
 .container1 img{
     width: 90%;

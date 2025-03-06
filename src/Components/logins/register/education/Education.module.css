@@ -1,141 +1,141 @@
-.educationContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 20px;
-  padding-right: 80px;
-  padding-left: 80px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-.family{
-  box-shadow: 0 2px 10px rgb(128, 126, 126);
-  /* padding-left: 50px;
-  padding-right: 50px; */
-  background-color: white;
-  border-radius: 10px;
-  padding: 50px;
+/* Familyback.module.css */
 
+/* Container for the form */
+.formContainer {
+  /* display: flex; */
+  /* flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+ 
+  padding: 40px;
+  /* min-height: 100vh; */
+  background-color: #f5f5f5;
 }
-.main{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 40px;
-/* background-color: white; */
-}
-
-/* .maincontainar{
-  width: 50%;
-} */
-.educationContainer h2 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
+.title{
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 10px;
   color: #333;
+  text-align: center;
+  margin-bottom: 5px;
 }
-.patrika{
-  display: grid;
-  gap: 40px;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-.maincontainar{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-.educationContainer label {
-  font-size: 1rem;
+/* Title of the form */
+/* .title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+} */
+
+/* Section headings */
+h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  
   color: #333;
   margin-bottom: 5px;
-  display: block;
+  padding-left: 5px;
 }
 
-.educationContainer input,
-.educationContainer select,
-.educationContainer textarea {
+/* Styling for each form section */
+.section {
+  background-color: #fff;
+  padding-top: 20px;
   width: 100%;
-  padding: 8px;
-  margin-bottom: 15px;
-  font-size: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: 8px;
+ 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+ 
 }
-
-.educationContainer input[type="number"] {
-  -moz-appearance: textfield;
+.detail{
+  text-align: center;
+  margin-top: 20px;
 }
-
-.educationContainer textarea {
-  resize: vertical;
-  min-height: 100px;
+.personal{
+  /* width: 100%; */
+  display: grid;
+  padding: 20px;
+  gap: 30px;
+  grid-template-columns: 1fr 1fr 1fr;
 }
-
-.educationContainer .ageRange {
+/* Form group layout for label and input fields */
+.formGroup {
+  
   display: flex;
-  gap: 10px;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+.mainsection{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+/* Label styling */
+label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
 }
 
-.educationContainer .ageRange input {
-  width: 48%;
-}
-
-.educationContainer input:focus,
-.educationContainer select:focus,
-.educationContainer textarea:focus {
+/* Input and select fields styling */
+.input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
   outline: none;
+  transition: border-color 0.3s;
+}
+
+.input:focus {
   border-color: #4CAF50;
 }
 
-.educationContainer input:disabled,
-.educationContainer select:disabled,
-.educationContainer textarea:disabled {
-  background-color: #f0f0f0;
-  cursor: not-allowed;
-}
-
-/* button {
-  padding: 10px 20px;
-  font-size: 1rem;
-  background-color: #007BFF;
+/* Submit button styling */
+.submitBtn {
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  background-color: #4CAF50;
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-} */
-
-button:disabled {
-  background-color: #ddd;
-  cursor: not-allowed;
+  transition: background-color 0.3s;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+  display: block;
 }
 
-/* button:hover:not(:disabled) {
-  background-color: #0056b3;
-} */
-
-button:focus {
-  outline: none;
+.submitBtn:hover {
+  background-color: #45a049;
 }
 
-input[required]:valid,
-textarea[required]:valid,
-select[required]:valid {
-  border-color: #2c2d2c;
+.submitBtn:active {
+  background-color: #3e8e41;
 }
 
-input[required]:invalid,
-textarea[required]:invalid,
-select[required]:invalid {
-  border-color: #181717;
-}
+/* Responsiveness for smaller screens */
+@media (max-width: 768px) {
+  .formContainer {
+    padding: 20px;
+  }
 
-input[required]:valid + label,
-textarea[required]:valid + label,
-select[required]:valid + label {
-  color: #171717;
-}
+  .section {
+    padding: 15px;
+  }
 
-input[required]:invalid + label,
-textarea[required]:invalid + label,
-select[required]:invalid + label {
-  color: #FF6347;
+  .input {
+    font-size: 0.9rem;
+  }
+
+  .submitBtn {
+    font-size: 1rem;
+    width: 100%;
+  }
 }

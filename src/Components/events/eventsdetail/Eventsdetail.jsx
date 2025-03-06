@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import styles from "./Eventsdetail.module.css";
-import event1 from "../image/event6.jpg"; // Importing the background image
+import event1 from "../image/image3.jpg" // Importing the background image
 
 const Eventsdetail = () => {
   const { id } = useParams(); // Get event ID from URL
@@ -47,7 +47,7 @@ const Eventsdetail = () => {
         <img
           src={event.imageUrl || "https://via.placeholder.com/300"}
           alt={event.name}
-          className={styles.image}
+          className={styles.imagemain}
         />
         <div className={styles.textContent}>
           <p className={styles.eventDetails}>
@@ -57,10 +57,14 @@ const Eventsdetail = () => {
             <strong>Date:</strong> {new Date(event.date).toLocaleDateString()}
           </p>
           <p className={styles.eventDetails}>
+            <strong>Time Of Event:</strong> {event.timeOfEvent}
+          </p>
+          
+          <p className={styles.eventDetails}>
             <strong>Contact No:</strong> {event.contact}
           </p>
           <p className={styles.eventDetails}>
-            <strong>Category:</strong> {event.contact}
+            <strong>Category:</strong> {event.category}
           </p>
           <p className={styles.eventDetails}>
             <strong>Organizer:</strong> {event.organizer || "N/A"}
@@ -71,7 +75,7 @@ const Eventsdetail = () => {
         <p className={styles.description}>{event.description}</p>
       </div>
       <div className={styles.attendees}>
-        <h3>Attendees:</h3>
+        <h3 className={styles.attendeemain}>Attendees:</h3>
         {event.attendees && event.attendees.length > 0 ? (
           <ul className={styles.maincard}>
             {event.attendees.map((attendee, index) => (

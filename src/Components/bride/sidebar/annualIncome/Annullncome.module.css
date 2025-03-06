@@ -5,7 +5,7 @@
     /* border: 1px solid #ddd; */
     border-radius: 8px;
     background-color: white;
-    width: 95%;
+    width: 99%;
     /* max-width: 410px; */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
@@ -25,19 +25,29 @@
     border: none;
     font-size: 16px;
     /* margin-right: 0px; */
- margin-left: 75px;
+ margin-left: 113px;
     cursor: pointer;
-    padding: 13px;
+    padding: 20px;
     color: #151617;
-    background-color: rgb(244, 64, 64);
+    /* background-color: rgb(244, 64, 64); */
     transition: transform 0.2s ease, color 0.2s ease;
   }
   
   .toggleButton:hover {
     color: #0b0b0b;
-    background-color: rgb(254, 74, 74);
+    background-color:white;
   }
-  
+  .title{
+     /* display: flex; */
+     justify-content: space-between;
+     /* align-items: center; */
+     font-size: 16px;
+     margin: 0;
+     /* display: flex; */
+     padding-bottom: 10px;
+     margin-top: 10px;
+     /* border-bottom: 1px solid #ddd; */
+  }
   .dropdown {
     margin-top: 10px;
     display: flex;

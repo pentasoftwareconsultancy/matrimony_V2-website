@@ -7,11 +7,12 @@ const MemberCard = ({ member }) => {
     <Link to={`/members/${member._id}`} className={styles.card}>
       <div className={styles.main}>
       <img src={member.profilePic} alt={member.name} className={styles.image} />
-      </div>
+     
 <div className={styles.maintext}>
       <h3 className={styles.name}>{member.name}</h3>
       <p className={styles.title}>{member.designation}</p>
       <p className={styles.title}>{member.phone}</p>
+      </div>
       </div>
     </Link>
   );

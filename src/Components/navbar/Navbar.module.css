@@ -23,7 +23,7 @@
 .logoImage {
   width:20%; /* Adjust as needed */
   /* zoom: 200%; */
-background-color: rgb(241, 228, 228);
+/* background-color: rgb(241, 228, 228); */
 border-radius: 100px;
   height: 8vh;
   object-fit: contain; /* Ensures the image scales properly */

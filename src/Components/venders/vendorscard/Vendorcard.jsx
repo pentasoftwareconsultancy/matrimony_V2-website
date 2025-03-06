@@ -11,15 +11,17 @@ const VendorCard = ({ vendor }) => {
       <img
         src={profilePicUrl || fallbackImage}
         alt={title}
-        className={styles.image}
+        className={styles.imagemain}
        
       />
       <div className={styles.content}>
         <h3 className={styles.title}>{title}</h3>
-        <p className={styles.date}>Name: {name}</p>
-        <p className={styles.time}>Phone: {phone}</p>
-        <p className={styles.time}>Address: {address}</p>
-        <p className={styles.description}>{description}</p>
+        <div className={styles.timename}>
+        <p className={styles.date}><strong>Name:</strong> {name}</p>
+        <p className={styles.time}><strong>Phone:</strong> {phone}</p>
+        <p className={styles.time}><strong>Address:</strong> {address}</p>
+        </div>
+        {/* <p className={styles.description}>{description}</p> */}
         <Link to={`/vendor-detail/${_id}`} className={styles.link}>
           Read More
         </Link>
