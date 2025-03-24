@@ -3,6 +3,7 @@ import EventCard from "../../Components/events/eventCards/EventCard";
 import styles from "./Eventspages.module.css";
 import Eventshero from "../../Components/events/eventshero/Eventshero";
 import Eventfilter from "../../Components/events/eventfilter/Eventfilter";
+import ScrollingImages from "../../Components/events/scrolling/ScrollingImages";
 
 const Eventspages = () => {
   const [events, setEvents] = useState([]);
@@ -72,7 +73,10 @@ const Eventspages = () => {
 
   return (
     <div className={styles.container}>
-      <Eventshero />
+      {/* <Eventshero /> */}
+      
+      <ScrollingImages/>
+      
       <Eventfilter
         selectedLocation={selectedLocation}
         setSelectedLocation={setSelectedLocation}
@@ -83,10 +87,12 @@ const Eventspages = () => {
         names={names}
       />
       <h1 className={styles.heading}>Events</h1>
+      <div className={styles.main}>
       <div className={styles.eventGrid}>
         {filteredEvents.map((event) => (
           <EventCard key={event._id} event={event} />
         ))}
+      </div>
       </div>
     </div>
   );

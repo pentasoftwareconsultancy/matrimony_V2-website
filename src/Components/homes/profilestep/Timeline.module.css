@@ -84,7 +84,10 @@ font-weight: 600;
 }
 .main{
     background-color: white;
-    /* text-align: justify; */
+    
+}
+.main:hover{
+  color: red;
 }
 .text{
     text-align: justify;

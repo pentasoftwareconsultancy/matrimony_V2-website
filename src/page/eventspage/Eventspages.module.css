@@ -2,7 +2,7 @@
 
 .container {
   padding: 20px;
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 20px auto;
 }
 
@@ -14,7 +14,10 @@
   margin-top: 20px;
   margin-bottom: 30px;
 }
-
+.main{
+  margin-left: 50px;
+  margin-right: 50px;
+}
 .eventGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Fixed to 3 columns */
@@ -22,7 +25,16 @@
   margin-top: 20px;
   justify-content: center;
 }
-
+.sroling{
+  width: 150%;
+  
+}
+.srolingmain{
+  /* width: 150%; */
+  height: 10vh;
+  margin-left: -100px;
+  /* margin-right: 500px; */
+}
 .card {
   width: 300px; /* Fixed width */
   height: 400px; /* Fixed height */

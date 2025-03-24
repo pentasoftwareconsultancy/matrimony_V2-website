@@ -38,12 +38,12 @@ const Footer = () => {
         </div>
 
         <div className={styles.section}>
-          <h3 className={styles.links}>Quick Links</h3>
+          <h3 className={styles.linking}>Quick Links</h3>
           <ul>
-            <li><Link to="/contact">Contact Us</Link></li>
-            <li><Link to="/member">Committee Members</Link></li>
-            <li><Link to="/vendors">Vendors</Link></li>
-            <li><Link to="/events">Event</Link></li>
+            <li className="newli"><Link to="/contact">Contact Us</Link></li>
+            <li className="newli"><Link to="/member">Committee Members</Link></li>
+            <li className="newli"><Link to="/vendors">Vendors</Link></li>
+            <li className="newli"><Link to="/events">Event</Link></li>
           </ul>
         </div>
 

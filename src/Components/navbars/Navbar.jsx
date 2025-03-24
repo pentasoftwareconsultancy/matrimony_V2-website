@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import logo from "./logo.png";
+import TranslateWebsite from "../transletion/Transletion";
 
 const Navbar = ({ isHomePage }) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -62,6 +63,10 @@ const Navbar = ({ isHomePage }) => {
           <Link to="/groommain" className={isHomePage ? styles.whiteText : styles.blackText}>
             Groom
           </Link>
+          {/* <TranslateWebsite/> */}
+          {/* <Link to="/marathi" className={isHomePage ? styles.whiteText : styles.blackText}>
+           Marathi
+          </Link> */}
 
           {/* Services Dropdown */}
           <div
@@ -93,6 +98,9 @@ const Navbar = ({ isHomePage }) => {
           <Link to="/contact" className={isHomePage ? styles.whiteText : styles.blackText}>
             Contact
           </Link>
+          <Link to="/pricing" className={isHomePage ? styles.whiteText : styles.blackText}>
+Price
+</Link>
         </nav>
 
         {/* Log In / Log Out Button */}

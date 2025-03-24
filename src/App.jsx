@@ -26,6 +26,9 @@ import MemberDetail from "./Components/member/memberdetails/Memberdetail";
 import Bridepages from "./page/bridepages/Bridepages";
 import Groommain from "./Components/groom/groommain/Groommain";
 import Logout from "./Components/logins/logout/Logout";
+import Translate from "./Components/transletion/Transletion";
+import PricingPlans from "./Components/pricings/pricingmain/Pricingmains";
+import PaymentMethods from "./Components/pricings/paymentmethod/Paymentmethod";
 
 function AppContent() {
   const location = useLocation();
@@ -45,9 +48,9 @@ function AppContent() {
         <Route path="/bride" element={<Bridepages />} />
         <Route path="/groom" element={<Bridepages />} />
         <Route path="/profile/:id" element={<ProfileComponent />} />
-        <Route path="/profilegroom/:id" element={<Groombiodata />} />
+        {/* <Route path="/profilegroom/:id" element={<Groombiodata />} /> */}
         <Route path="/contact" element={<Contactpages />} />
-        <Route path="/groom/:index" element={<Groombiodata />} />
+        {/* <Route path="/groom/:index" element={<Groombiodata />} /> */}
         <Route path="/groommain" element={<Groommain/>}/>
         <Route path="/login" element={<Login />} />
         <Route path="/blog" element={<Blogpages />} />
@@ -57,13 +60,17 @@ function AppContent() {
         <Route path="/events/:id" element={<Eventdetail />} />
         <Route path="/events" element={<EventCard />} />
         <Route path="/card-list" element={<Newspages />} />
-        <Route path="/card-detail/:id" element={<Newcardpage />} />
-        <Route path="/groomprofile" element={<GroomProfile />} />
+        {/* <Route path="/card-detail/:id" element={<Newcardpage />} /> */}
+        {/* <Route path="/groomprofile" element={<GroomProfile />} /> */}
         <Route path="/vendors" element={<Vendorpages />} />
         <Route path="/vendordetail/:id" element={<VendorDetail />} />
         <Route path="/member" element={<MemberPage />} />
         <Route path="/members/:id" element={<MemberDetail />} />
         <Route path="/logout" element={<Logout/>}/>
+        <Route path="/marathi" element={<Translate/>}/>
+        <Route path="/pricing" element={<PricingPlans/>}/>
+        <Route path="/paymentmethod/:id" element={<PaymentMethods/>}/> 
+        
       </Routes>
       {/* Only render Footer if it's not the login page */}
       {!isLoginPage && !isRegisterPage && !isProfilePage && <Footer />}

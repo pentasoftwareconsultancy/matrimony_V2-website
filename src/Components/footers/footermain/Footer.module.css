@@ -21,8 +21,13 @@
   min-width: 200px;
   margin: 0 1rem;
 }
+.newli{
+  color: #ffffff;
+}
+
+
  li:hover{
-  color: #e33f5f;
+  color: #ffffff;
 }
 .logo {
   text-align: center;
@@ -34,11 +39,13 @@
   height: auto;
   margin-bottom: 10px;
 }
-.links{
+.linking{
   color: white;
-  margin-top: 100px;
+  /* margin-top: 100px; */
 }
-
+.linking:active {
+  color: rgb(249, 245, 245); /* Change this to any color you want when clicked */
+}
 .section p {
   text-align: center;
   color: white;

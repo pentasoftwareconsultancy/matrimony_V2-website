@@ -265,12 +265,12 @@ addText("About Family", profile.aboutFamily, 110);
         <div className={styles.actions}>
           <button onClick={handleDownload} className={styles.downloadButton}>
             <FaDownload />
-            Download as PDF
+             PDF
           </button>
         </div>
         
       </div>
-      <div className={styles.name}> <p><strong></strong> {profile.fullName}</p></div>
+      <div className={styles.name}>  {profile.fullName}</div>
       <div id="profileContent" className={styles.profileContent} >
         <div className={styles.main}>
           <div className={styles.manicard}>
